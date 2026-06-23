@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import './LeadForm.css';
 
 export default function LeadForm({ defaultCourse = '' }) {
@@ -16,6 +18,7 @@ export default function LeadForm({ defaultCourse = '' }) {
     const webhookUrl = 'https://n8n.tuodominio.com/webhook/amarcord-hub';
     
     try {
+
       // Invia i dati a n8n
       await fetch(webhookUrl, {
         method: 'POST',
@@ -43,7 +46,14 @@ export default function LeadForm({ defaultCourse = '' }) {
   }
 
   return (
-    <div className="glass lead-form-container animate-fade-in" id="lead-form">
+    <motion.div 
+      className="glass lead-form-container" 
+      id="lead-form"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <h3>Richiedi Informazioni</h3>
       <p className="form-subtitle">Compila il modulo per scoprire come trasformare la tua passione in professione.</p>
       
@@ -76,16 +86,20 @@ export default function LeadForm({ defaultCourse = '' }) {
           </select>
         </div>
 
-        <div className="form-group">
-          <label className="form-label" htmlFor="motivazione">Perché vuoi frequentare l'Accademia Amarcord? *</label>
-          <textarea id="motivazione" name="motivazione" className="form-textarea" required placeholder="Scrivi brevemente la tua motivazione (es. 'Voglio fare l'attore', 'Mi appassiona il montaggio'...)"></textarea>
+        <div className="form-group" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', marginBottom: '1.5rem', marginTop: '1rem' }}>
+          <input type="checkbox" id="privacy" name="privacyAccepted" required style={{ marginTop: '0.2rem', cursor: 'pointer' }} />
+          <label htmlFor="privacy" className="form-label" style={{ marginBottom: 0, fontSize: '0.8rem', lineHeight: 1.4, cursor: 'pointer' }}>
+            Dichiaro di aver letto la <Link to="/privacy" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>Privacy Policy</Link> e presto il consenso al trattamento dei miei dati personali. *
+          </label>
         </div>
 
         <button type="submit" className="btn-primary" style={{ width: '100%' }} disabled={loading}>
           {loading ? 'Invio in corso...' : 'Invia Richiesta'}
         </button>
-        <p className="privacy-notice">Inviando confermi di aver letto la Privacy Policy e accetti di essere ricontattato.</p>
+        <p style={{ fontSize: '0.85rem', textAlign: 'center', marginTop: '1rem', color: 'var(--text-main)', fontWeight: 500, lineHeight: 1.4 }}>
+          <strong style={{ color: 'var(--accent-gold)' }}>NB:</strong> L’iscrizione è RISERVATA<br />a corsisti di età compresa tra 16 e 40 ANNI
+        </p>
       </form>
-    </div>
+    </motion.div>
   );
 }

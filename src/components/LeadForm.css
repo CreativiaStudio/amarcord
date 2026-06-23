@@ -1,21 +1,25 @@
 .lead-form-container {
-  padding: 2rem;
+  padding: 1.5rem; /* Ridotto da 2rem */
   width: 100%;
   max-width: 450px;
   position: relative;
   z-index: 10;
+  background-color: rgba(22, 24, 29, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
 }
 
 .lead-form-container h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem; /* Ridotto da 1.8rem */
+  margin-bottom: 0.3rem;
   color: #fff;
 }
 
 .form-subtitle {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 2rem;
+  font-size: 0.85rem; /* Ridotto da 0.95rem */
+  margin-bottom: 1.2rem; /* Ridotto da 2rem */
+  line-height: 1.4;
 }
 
 .privacy-notice {
@@ -36,4 +40,29 @@
   color: var(--accent-gold);
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+/* Compattamento specifico per i campi del form dentro questo contenitore */
+.lead-form-container .form-group {
+  margin-bottom: 1rem; /* Ridotto rispetto al default globale */
+}
+
+.lead-form-container .form-label {
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.lead-form-container .form-input, 
+.lead-form-container .form-select {
+  padding: 0.6rem 1rem; /* Meno padding verticale */
+}
+
+.lead-form-container .form-textarea {
+  min-height: 70px; /* Ridotta l'altezza minima dell'area di testo */
+  padding: 0.6rem 1rem;
+}
+
+.lead-form-container .btn-primary {
+  padding: 0.8rem 2rem; /* Pulsante leggermente più snello */
+  margin-top: 0.5rem;
 }

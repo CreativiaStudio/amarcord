@@ -1,6 +1,6 @@
 .courses-section {
   padding: 6rem 0;
-  background-color: #050505;
+  background-color: transparent;
 }
 
 .section-header {
@@ -97,3 +97,12 @@
     font-size: 2rem;
   }
 }
+
+.custom-course-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  /* Applica il colore var(--accent-gold) all'icona tramite CSS filter */
+  filter: invert(72%) sepia(85%) saturate(1477%) hue-rotate(1deg) brightness(105%) contrast(106%);
+}
+
