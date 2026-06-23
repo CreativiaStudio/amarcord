@@ -14,8 +14,8 @@ export default function LeadForm({ defaultCourse = '' }) {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
-    // URL del Webhook n8n di Creativia Studio
-    const webhookUrl = 'https://n8n.creativiastudio.com/webhook/amarcord-meta-capi';
+    // URL del Webhook n8n di Creativia Studio (TEST)
+    const webhookUrl = 'https://n8n.creativiastudio.com/webhook-test/amarcord-meta-capi';
     
     try {
       // Invia i dati a n8n come form-urlencoded (bypassa il blocco CORS preflight)
