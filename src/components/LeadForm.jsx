@@ -18,12 +18,11 @@ export default function LeadForm({ defaultCourse = '' }) {
     const webhookUrl = 'https://n8n.creativiastudio.com/webhook/amarcord-meta-capi';
     
     try {
-
-      // Invia i dati a n8n
+      // Invia i dati a n8n come form-urlencoded (bypassa il blocco CORS preflight)
       await fetch(webhookUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
       });
       // Mostra schermata di successo
       setSubmitted(true);
