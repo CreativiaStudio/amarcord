@@ -277,14 +277,14 @@ export default function CoursePage() {
           {/* Right Column: Desktop Form */}
           <aside className="course-sidebar desktop-only">
             <div className="sticky-sidebar">
-              <LeadForm defaultCourse={course.title} />
+              <LeadForm defaultCourse={course.id.charAt(0).toUpperCase() + course.id.slice(1)} />
             </div>
           </aside>
         </div>
         
         {/* Mobile Form Section (Bottom of page content) */}
         <div className="mobile-only mobile-form-wrapper">
-          <LeadForm defaultCourse={course.title} />
+          <LeadForm defaultCourse={course.id.charAt(0).toUpperCase() + course.id.slice(1)} />
         </div>
       </main>
 
@@ -301,7 +301,7 @@ export default function CoursePage() {
       }}>
         <div className="modal-content">
           <button className="modal-close" onClick={closeModal}>&times;</button>
-          <LeadForm defaultCourse={course.title} />
+          <LeadForm defaultCourse={course.id.charAt(0).toUpperCase() + course.id.slice(1)} />
         </div>
       </div>
 
