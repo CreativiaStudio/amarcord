@@ -40,7 +40,7 @@ export const coursesData = {
     id: 'trucco',
     title: 'Trucco Cinematografico e Make-up Artist',
     icon: <img src="https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/05/HOME-AMARCORD-new-14.png" alt="Icona Trucco" style={iconStyle} />,
-    heroImage: 'https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Trucco-Amarcord-2.jpeg',
+    heroImage: 'https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Trucco-Amarcord-3.jpeg',
     description: "Il volto dell'attore è la tua tela. Imparerai a creare make-up correttivi perfetti per il grande schermo e a padroneggiare gli effetti speciali protesici (ferite, invecchiamento, mostri). Il trucco non è estetica, è narrazione visiva.",
     duration: "10 mesi (Ottobre - Luglio)",
     modules: [
@@ -58,7 +58,7 @@ export const coursesData = {
     popupVideo: "https://pub-596f32c0181d45378b2fcc7e714e164c.r2.dev/trucco-backstage.mp4",
     gallery: [
       "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Trucco-Amarcord-2.jpeg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Trucco-Amarcord-3.jpeg",
+      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Trucco-Amarcord.jpeg",
       "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Trucco-Amarcord-4.jpeg",
       "/trucco-poster.jpg"
     ]
