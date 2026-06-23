@@ -14,8 +14,8 @@ export default function LeadForm({ defaultCourse = '' }) {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
-    // Sostituisci questo URL con l'indirizzo del tuo Webhook n8n
-    const webhookUrl = 'https://n8n.tuodominio.com/webhook/amarcord-hub';
+    // URL del Webhook n8n di Creativia Studio
+    const webhookUrl = 'https://n8n.creativiastudio.com/webhook/amarcord-meta-capi';
     
     try {
 
