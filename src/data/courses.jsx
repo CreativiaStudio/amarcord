@@ -11,8 +11,8 @@ export const coursesData = {
   regia: {
     id: 'regia',
     title: 'Regia Cinematografica',
-    icon: <img src="https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/05/HOME-AMARCORD-new-18.png" alt="Icona Regia" style={iconStyle} />,
-    heroImage: 'https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/Corso-di-regia-1.jpg',
+    icon: <img src="/images/2024_05_HOME-AMARCORD-new-18.png" alt="Icona Regia" style={iconStyle} />,
+    heroImage: '/images/2024_04_Corso-di-regia-1.jpg',
     heroPosition: 'center 75%',
     description: "Il regista è l'occhio del pubblico. In questo corso imparerai a tradurre un'idea in immagini, guidare gli attori e coordinare l'intera troupe. Dalla pre-produzione al montaggio finale, sarai tu a dettare il ritmo della storia.",
     duration: "10 mesi (Ottobre - Luglio)",
@@ -30,17 +30,17 @@ export const coursesData = {
     setSubtitle: "Dimentica i banchi di scuola. Qui si impara dirigendo veri attori, muovendo le macchine da presa e respirando la polvere dei set accademici.",
     popupVideo: "https://pub-596f32c0181d45378b2fcc7e714e164c.r2.dev/regia-backstage.mp4",
     gallery: [
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/309386559_489299486543329_3459529010142985668_n.jpg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/309100609_489299503209994_2271440024644496748_n.jpg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/Corso-di-regia-2.jpg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/Corso-di-regia-1.jpg"
+      "/images/2024_04_309386559_489299486543329_3459529010142985668_n.jpg",
+      "/images/2024_04_309100609_489299503209994_2271440024644496748_n.jpg",
+      "/images/2024_04_Corso-di-regia-2.jpg",
+      "/images/2024_04_Corso-di-regia-1.jpg"
     ]
   },
   trucco: {
     id: 'trucco',
     title: 'Trucco Cinematografico e Make-up Artist',
-    icon: <img src="https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/05/HOME-AMARCORD-new-14.png" alt="Icona Trucco" style={iconStyle} />,
-    heroImage: 'https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Trucco-Amarcord-3.jpeg',
+    icon: <img src="/images/2024_05_HOME-AMARCORD-new-14.png" alt="Icona Trucco" style={iconStyle} />,
+    heroImage: '/images/2026_03_Trucco-Amarcord-3.jpeg',
     heroPosition: 'center calc(50% + 50px)',
     description: "Il volto dell'attore è la tua tela. Imparerai a creare make-up correttivi perfetti per il grande schermo e a padroneggiare gli effetti speciali protesici (ferite, invecchiamento, mostri). Il trucco non è estetica, è narrazione visiva.",
     duration: "10 mesi (Ottobre - Luglio)",
@@ -58,17 +58,17 @@ export const coursesData = {
     setSubtitle: "Lavorerai sotto pressione nei set accademici, curando il beauty e testando ferite ed effetti speciali (SFX) prima del ciak.",
     popupVideo: "https://pub-596f32c0181d45378b2fcc7e714e164c.r2.dev/trucco-backstage.mp4",
     gallery: [
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Trucco-Amarcord-2.jpeg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Trucco-Amarcord.jpeg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Trucco-Amarcord-4.jpeg",
+      "/images/2026_03_Trucco-Amarcord-2.jpeg",
+      "/images/2026_03_Trucco-Amarcord.jpeg",
+      "/images/2026_03_Trucco-Amarcord-4.jpeg",
       "/trucco-poster.jpg"
     ]
   },
   sceneggiatura: {
     id: 'sceneggiatura',
     title: 'Sceneggiatura',
-    icon: <img src="https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/05/HOME-AMARCORD-new-15.png" alt="Icona Sceneggiatura" style={iconStyle} />,
-    heroImage: 'https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/Corso-di-sceneggiatura-1.jpg',
+    icon: <img src="/images/2024_05_HOME-AMARCORD-new-15.png" alt="Icona Sceneggiatura" style={iconStyle} />,
+    heroImage: '/images/2024_04_Corso-di-sceneggiatura-1.jpg',
     heroPosition: 'center 60%',
     description: "Ogni grande film nasce da una grande pagina bianca. Apprenderai la struttura in tre atti, lo sviluppo dell'arco del personaggio e la formattazione professionale. Attenzione: i primi 5 mesi sono svolti in totale interdisciplina con il corso di Regia. Questo dà numerosi vantaggi agli studenti, permettendo agli sceneggiatori di capire esattamente come le loro parole vengono tradotte sul set.",
     duration: "10 mesi (Ottobre - Luglio)",
@@ -85,16 +85,16 @@ export const coursesData = {
     hasScholarship: true,
     setSubtitle: "Nessun testo resterà nel cassetto: le pagine migliori scritte in aula prenderanno fisicamente vita durante i cortometraggi di fine anno.",
     gallery: [
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/Corso-di-sceneggiatura-1.jpg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/sceneggiatura-Amarcord-1.jpeg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/Corso-di-sceneggiatura-3.jpg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/Corso-di-sceneggiatura-2.jpg"
+      "/images/2024_04_Corso-di-sceneggiatura-1.jpg",
+      "/images/2026_03_sceneggiatura-Amarcord-1.jpeg",
+      "/images/2024_04_Corso-di-sceneggiatura-3.jpg",
+      "/images/2024_04_Corso-di-sceneggiatura-2.jpg"
     ]
   },
   fotografia: {
     id: 'fotografia',
     title: 'Direzione della Fotografia e Operatore MdP',
-    icon: <img src="https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/05/HOME-AMARCORD-new-12.png" alt="Icona Fotografia" style={iconStyle} />,
+    icon: <img src="/images/2024_05_HOME-AMARCORD-new-12.png" alt="Icona Fotografia" style={iconStyle} />,
     heroImage: '/fotografia-hero-upscale.png',
     description: "L'immagine è tutto. Non siamo qui per farti usare una reflex. Metterai le mani su vere macchine da presa cinematografiche (le stesse usate nelle produzioni Netflix: ARRI, RED, Sony) e imparerai a scolpire con la luce. Diventerai il vero braccio destro del regista.",
     duration: "10 mesi (Ottobre - Luglio)",
@@ -112,16 +112,16 @@ export const coursesData = {
     setSubtitle: "Domina la luce, calibra l'esposizione e posiziona le luci sui set accademici imparando sul campo i segreti del direttore della fotografia.",
     gallery: [
       "/fotografia-hero-upscale.png",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/CORSO-DI-DIREZIONE-DELLA-FOTOGRAFIA-E-OPERATORE-MDP-2.jpeg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/CORSO-DI-DIREZIONE-DELLA-FOTOGRAFIA-E-OPERATORE-MDP-3.jpeg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/04/Corso-di-Fotografia2.jpeg"
+      "/images/2026_03_CORSO-DI-DIREZIONE-DELLA-FOTOGRAFIA-E-OPERATORE-MDP-2.jpeg",
+      "/images/2026_03_CORSO-DI-DIREZIONE-DELLA-FOTOGRAFIA-E-OPERATORE-MDP-3.jpeg",
+      "/images/2026_04_Corso-di-Fotografia2.jpeg"
     ]
   },
   recitazione: {
     id: 'recitazione',
     title: 'Recitazione Cinematografica',
-    icon: <img src="https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/05/HOME-AMARCORD-new-19.png" alt="Icona Recitazione" style={iconStyle} />,
-    heroImage: 'https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Amarcord-recitazione-7.jpeg',
+    icon: <img src="/images/2024_05_HOME-AMARCORD-new-19.png" alt="Icona Recitazione" style={iconStyle} />,
+    heroImage: '/images/2026_03_Amarcord-recitazione-7.jpeg',
     description: "Recitare per il cinema è l'arte della sottrazione. Imparerai il Metodo Stanislavskij-Strasberg e la tecnica di acting for camera. Lavorerai costantemente davanti all'obiettivo, abbattendo la paura del ciak, e capirai come affrontare un vero provino cinematografico.",
     duration: "10 mesi (Ottobre - Luglio)",
     frequency: "Ogni Sabato",
@@ -137,17 +137,17 @@ export const coursesData = {
     hasScholarship: false,
     setSubtitle: "Non reciterai al vuoto. Svilupperai il tuo acting for camera misurandoti direttamente con i registi accademici nei cortometraggi reali.",
     gallery: [
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Amarcord-recitazione-1.jpeg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Amarcord-recitazione-2.jpeg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Amarcord-recitazione-3.jpeg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2026/03/Amarcord-recitazione-5.jpeg"
+      "/images/2026_03_Amarcord-recitazione-1.jpeg",
+      "/images/2026_03_Amarcord-recitazione-2.jpeg",
+      "/images/2026_03_Amarcord-recitazione-3.jpeg",
+      "/images/2026_03_Amarcord-recitazione-5.jpeg"
     ]
   },
   doppiaggio: {
     id: 'doppiaggio',
     title: 'Doppiaggio e Voice Over',
-    icon: <img src="https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/05/HOME-AMARCORD-new-13.png" alt="Icona Doppiaggio" style={iconStyle} />,
-    heroImage: 'https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/Corso-di-Doppiaggio-1.jpg',
+    icon: <img src="/images/2024_05_HOME-AMARCORD-new-13.png" alt="Icona Doppiaggio" style={iconStyle} />,
+    heroImage: '/images/2024_04_Corso-di-Doppiaggio-1.jpg',
     description: "La voce è il tuo strumento. Affinerai la dizione, l'articolazione e la respirazione diaframmatica. Verrai messo alla prova al leggio in vere sale di doppiaggio, imparando il sincrono labiale, l'adattamento e l'interpretazione al microfono.",
     duration: "10 mesi (Ottobre - Luglio)",
     frequency: "Frequenza Settimanale",
@@ -164,10 +164,10 @@ export const coursesData = {
     hasScholarship: false,
     setSubtitle: "L'esame della verità: ti siederai al leggio nella nostra vera sala di doppiaggio (schermo gigante e insonorizzazione totale).",
     gallery: [
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/Corso-di-Doppiaggio-2.jpg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/Corso-di-Doppiaggio-1.jpg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/Corso-di-Doppiaggio-3.jpg",
-      "https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/04/Corso-di-Doppiaggio-4.jpg"
+      "/images/2024_04_Corso-di-Doppiaggio-2.jpg",
+      "/images/2024_04_Corso-di-Doppiaggio-1.jpg",
+      "/images/2024_04_Corso-di-Doppiaggio-3.jpg",
+      "/images/2024_04_Corso-di-Doppiaggio-4.jpg"
     ]
   }
 };
