@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './LeadForm.css';
 
 export default function LeadForm({ defaultCourse = '' }) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,25 +25,16 @@ export default function LeadForm({ defaultCourse = '' }) {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString()
       });
-      // Mostra schermata di successo
-      setSubmitted(true);
+      // Esegue il redirect alla Thank You Page invece di mostrare il box
+      navigate('/grazie');
     } catch (error) {
       console.error("Errore nell'invio del form a n8n:", error);
-      // Se c'è un errore di CORS o rete (per via del placeholder), simuliamo il successo per l'anteprima
-      setSubmitted(true);
+      // Fallback: se n8n fallisce ma vogliamo comunque mandare l'utente alla UI di grazie
+      navigate('/grazie');
     } finally {
       setLoading(false);
     }
   };
-
-  if (submitted) {
-    return (
-      <div className="glass lead-form-success animate-fade-in">
-        <h3>🎉 Richiesta Inviata!</h3>
-        <p>Grazie per l'interesse. La segreteria dell'Accademia Amarcord ti contatterà al più presto.</p>
-      </div>
-    );
-  }
 
   return (
     <motion.div 
