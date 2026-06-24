@@ -5,9 +5,21 @@ import { CheckCircle, Home, Instagram } from 'lucide-react';
 import './ThankYou.css';
 
 export default function ThankYou() {
-  // Scorri in alto quando si carica la pagina
+  // Scorri in alto e spara i tracciamenti quando si carica la pagina
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // 1. Forza l'evento Lead sul Pixel di Meta (se caricato)
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Lead');
+    }
+
+    // 2. Manda l'evento a Google Tag Manager per sicurezza (nel caso usi Google Ads)
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'page_view_grazie',
+      page_path: '/grazie'
+    });
   }, []);
 
   return (
