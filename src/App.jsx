@@ -4,6 +4,7 @@ import Home from './components/Home';
 import CoursePage from './components/CoursePage';
 import ThankYou from './components/ThankYou';
 import Privacy from './components/Privacy';
+import CookieBanner from './components/CookieBanner';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
             <Link to="/privacy" style={{ color: 'var(--text-muted)', fontSize: '0.9rem', textDecoration: 'underline' }}>Privacy Policy</Link>
           </p>
         </footer>
+
+        {/* GDPR Cookie Banner */}
+        <CookieBanner />
       </div>
     </Router>
   );
