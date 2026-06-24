@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Home, Instagram } from 'lucide-react';
+import { CheckCircle, Home } from 'lucide-react';
 import './ThankYou.css';
 
 export default function ThankYou() {
@@ -55,7 +55,6 @@ export default function ThankYou() {
           </Link>
           
           <a href="https://www.instagram.com/accademia_mediterranea_cinema/" target="_blank" rel="noopener noreferrer" className="btn-primary">
-            <Instagram size={18} />
             Seguici su Instagram
           </a>
         </div>
