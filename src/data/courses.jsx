@@ -147,7 +147,7 @@ export const coursesData = {
     id: 'doppiaggio',
     title: 'Doppiaggio e Voice Over',
     icon: <img src="/images/2024_05_HOME-AMARCORD-new-13.png" alt="Icona Doppiaggio" style={iconStyle} />,
-    heroImage: '/images/2024_04_Corso-di-Doppiaggio-1.jpg',
+    heroImage: '/images/Daniele-Giuliani-2.jpeg',
     description: "La voce è il tuo strumento. Affinerai la dizione, l'articolazione e la respirazione diaframmatica. Verrai messo alla prova al leggio in vere sale di doppiaggio, imparando il sincrono labiale, l'adattamento e l'interpretazione al microfono.",
     duration: "10 mesi (Ottobre - Luglio)",
     frequency: "Frequenza Settimanale",
