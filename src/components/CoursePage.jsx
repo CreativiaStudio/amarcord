@@ -251,7 +251,27 @@ export default function CoursePage() {
                   <Award className="section-icon" style={{ color: 'var(--accent-gold)' }} />
                   <h2 style={{ color: 'var(--accent-gold)' }}>Borse di Studio Disponibili</h2>
                 </div>
-                <img src="/images/borse-di-studio.jpg" alt="Allievi vincitori di borsa di studio con la direzione" style={{ width: '100%', borderRadius: 'var(--radius-md)', marginBottom: '1.5rem', border: '1px solid rgba(255,255,255,0.1)', objectFit: 'cover' }} />
+                <div style={{ position: 'relative', marginBottom: '1.5rem' }}>
+                  <img src="/images/borse-di-studio.jpg" alt="Allievi vincitori di borsa di studio con la direzione" style={{ width: '100%', borderRadius: 'var(--radius-md)', border: '1px solid rgba(255,255,255,0.1)', objectFit: 'cover', display: 'block' }} />
+                  <div style={{
+                    position: 'absolute',
+                    top: '1rem',
+                    right: '1rem',
+                    background: 'rgba(0, 0, 0, 0.75)',
+                    backdropFilter: 'blur(4px)',
+                    color: '#fff',
+                    padding: '0.4rem 0.8rem',
+                    borderRadius: '20px',
+                    fontSize: '0.75rem',
+                    fontWeight: 'bold',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
+                  }}>
+                    Edizione Passata
+                  </div>
+                </div>
                 <p>L'Accademia assegna annualmente prestigiose Borse di Studio per questo corso.</p>
                 <p style={{ marginTop: '0.5rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Le agevolazioni vengono assegnate unicamente in base a specifici requisiti, valutati dalla Direzione in sede di colloquio conoscitivo.</p>
               </motion.section>
