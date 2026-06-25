@@ -87,8 +87,8 @@ export default function LeadForm({ defaultCourse = '' }) {
         <button type="submit" className="btn-primary" style={{ width: '100%' }} disabled={loading}>
           {loading ? 'Invio in corso...' : 'Invia Richiesta'}
         </button>
-        <p style={{ fontSize: '0.85rem', textAlign: 'center', marginTop: '1rem', color: 'var(--text-main)', fontWeight: 500, lineHeight: 1.4 }}>
-          <strong style={{ color: 'var(--accent-gold)' }}>NB:</strong> L’iscrizione è RISERVATA<br />a corsisti di età compresa tra 16 e 40 ANNI
+        <p style={{ fontSize: '0.85rem', textAlign: 'center', marginTop: '1.5rem', color: 'var(--text-muted)', fontStyle: 'italic', lineHeight: 1.4 }}>
+          I nostri percorsi formativi sono strutturati per accompagnare allievi dai 16 ai 40 anni.
         </p>
       </form>
     </motion.div>
