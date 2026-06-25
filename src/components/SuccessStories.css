@@ -405,4 +405,12 @@
     width: 100%;
     padding: 1.5rem;
   }
+
+  .story-image-wrapper {
+    height: 200px;
+  }
+
+  .story-card {
+    overflow: visible;
+  }
 }
