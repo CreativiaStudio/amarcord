@@ -7,21 +7,51 @@ export default function SuccessStories() {
   const [selectedReview, setSelectedReview] = useState(null);
   const trackRef = useRef(null);
 
+  const extendedReviews = [...reviews, ...reviews, ...reviews];
+
+  const animationRef = useRef(null);
+
+  // Posiziona il carosello al centro (set centrale) al caricamento iniziale
   useEffect(() => {
-    if (selectedReview) return;
+    if (trackRef.current) {
+      const setWidth = trackRef.current.scrollWidth / 3;
+      trackRef.current.scrollLeft = setWidth;
+    }
+  }, []);
 
-    const interval = setInterval(() => {
+  // Controllo loop infinito nativo
+  const handleScroll = () => {
+    if (!trackRef.current) return;
+    const el = trackRef.current;
+    const setWidth = el.scrollWidth / 3;
+
+    if (el.scrollLeft >= setWidth * 2 - 10) {
+      el.scrollBy({ left: -setWidth, behavior: 'auto' });
+    } 
+    else if (el.scrollLeft <= 10) {
+      el.scrollBy({ left: setWidth, behavior: 'auto' });
+    }
+  };
+
+  // Scorrimento fluido continuo (walking)
+  useEffect(() => {
+    if (selectedReview) {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+      return;
+    }
+
+    const step = () => {
       if (trackRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = trackRef.current;
-        if (scrollLeft + clientWidth >= scrollWidth - 10) {
-          trackRef.current.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          scroll('right');
-        }
+        trackRef.current.scrollLeft += 1;
       }
-    }, 4000);
+      animationRef.current = requestAnimationFrame(step);
+    };
 
-    return () => clearInterval(interval);
+    animationRef.current = requestAnimationFrame(step);
+
+    return () => {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+    };
   }, [selectedReview]);
 
   const scroll = (direction) => {
@@ -111,8 +141,8 @@ export default function SuccessStories() {
           </button>
 
           <div className="reviews-carousel-wrapper">
-            <div className="reviews-carousel-track" ref={trackRef}>
-            {reviews.map((review, i) => (
+            <div className="reviews-carousel-track" ref={trackRef} onScroll={handleScroll}>
+            {extendedReviews.map((review, i) => (
               <div 
                 className="google-review-card glass" 
                 key={i} 
