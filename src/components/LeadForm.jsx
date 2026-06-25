@@ -15,9 +15,18 @@ export default function LeadForm({ defaultCourse = '' }) {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
-    // Generiamo un ID univoco per la deduplicazione dell'evento (es. lead_16843..._xyz)
+    // Generiamo un ID univoco per la deduplicazione dell'evento
     const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
     data.event_id = eventId;
+
+    // Catturiamo eventuali parametri URL (UTM, gclid, fbclid, ecc.)
+    const urlParams = new URLSearchParams(window.location.search);
+    for (const [key, value] of urlParams.entries()) {
+      // Evitiamo di sovrascrivere i campi del form se ci sono conflitti di nome
+      if (!data[key]) {
+        data[key] = value;
+      }
+    }
 
     // URL del Webhook n8n di Creativia Studio (PRODUZIONE)
     const webhookUrl = 'https://n8n.creativiastudio.com/webhook/amarcord-meta-capi';
