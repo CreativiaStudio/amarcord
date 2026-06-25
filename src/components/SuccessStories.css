@@ -23,6 +23,9 @@
 }
 
 .course-specific-stories .reviews-carousel-container {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
   padding-bottom: 20px;
 }
 
@@ -231,8 +234,10 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: -1rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 10;
 }
 
 .review-nav-btn {
