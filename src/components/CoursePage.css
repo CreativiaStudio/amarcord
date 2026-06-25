@@ -502,7 +502,7 @@
     min-height: 80vh;
     padding-bottom: 2rem;
     background-image: var(--hero-bg-mobile);
-    background-position: top center !important;
+    background-position: var(--hero-pos-mobile) !important;
   }
   
   .course-hero-overlay {

@@ -43,7 +43,9 @@ export default function CoursePage() {
       <header className="course-hero" style={{ 
         '--hero-bg-desktop': `url(${course.heroImage})`,
         '--hero-bg-mobile': `url(${course.heroImageMobile || course.heroImage})`,
-        backgroundPosition: course.heroPosition || 'center'
+        '--hero-pos-desktop': course.heroPosition || 'center',
+        '--hero-pos-mobile': course.heroPositionMobile || 'top center',
+        backgroundPosition: 'var(--hero-pos-desktop)'
       }}>
         <div className="course-hero-overlay"></div>
         <div className="container course-hero-content animate-fade-in">
