@@ -122,6 +122,11 @@ export default function CoursePage() {
               </div>
             </motion.section>
 
+            {/* RIPROVA SOCIALE SPECIFICA DEL CORSO (Spostata in alto) */}
+            <div style={{ margin: '3rem 0', background: 'rgba(255,255,255,0.02)', borderRadius: 'var(--radius-lg)' }}>
+              <SuccessStories courseId={course.id} />
+            </div>
+
             {/* 3. La Realtà (Galleria Immersiva) */}
             <motion.section 
               className="story-section gallery-section"
@@ -204,7 +209,7 @@ export default function CoursePage() {
                 <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
                   Compila il modulo e la nostra Direzione Didattica sarà lieta di fornirti tutte le informazioni dettagliate, gli orari e i costi, senza alcun impegno.
                 </p>
-                <button className="btn-primary" onClick={openModal}>Richiedi Info Ora</button>
+                <button className="btn-primary" onClick={openModal}>Scopri Costi e Programma</button>
               </div>
             </motion.section>
 
@@ -273,7 +278,10 @@ export default function CoursePage() {
               <div className="payment-badge" style={{ marginTop: '1.5rem', padding: '1rem', background: 'rgba(255,255,255,0.05)', borderRadius: 'var(--radius-sm)', borderLeft: '3px solid var(--accent-gold)' }}>
                 <strong style={{ color: 'var(--text-main)' }}>💰 Pagamento Rateizzabile:</strong> Il costo del corso è altamente sostenibile grazie alla possibilità di accedere a comode dilazioni di pagamento mensili.
               </div>
-              <p className="urgency-text" style={{ marginTop: '1.5rem' }}>Compila il modulo per bloccare il tuo posto o richiedere info e costi senza alcun impegno.</p>
+              <div className="urgency-badge" style={{ marginTop: '1.5rem', padding: '1rem', background: 'rgba(212, 55, 55, 0.1)', borderRadius: 'var(--radius-sm)', borderLeft: '3px solid #d43737' }}>
+                <strong style={{ color: '#ff6b6b' }}>⏳ Attenzione:</strong> Le ammissioni per l'anno accademico 2026/27 sono in chiusura. Rimangono pochissimi posti disponibili.
+              </div>
+              <p className="urgency-text" style={{ marginTop: '1.5rem', fontWeight: 'bold' }}>Compila il modulo ora per scoprire i costi completi e prenotare un colloquio conoscitivo gratuito (senza impegno).</p>
             </motion.section>
 
           </div>
@@ -292,12 +300,12 @@ export default function CoursePage() {
         </div>
       </main>
 
-      <SuccessStories />
+      {/* SuccessStories rimossa da qui (ora è in alto) */}
 
       {/* Sticky Bottom Bar (Mobile Only) */}
       <div className="sticky-bottom-bar mobile-only">
         <button className="btn-primary full-width animate-pulse-subtle" onClick={openModal}>
-          Richiedi Informazioni
+          Scopri costi e programma
         </button>
       </div>
 
