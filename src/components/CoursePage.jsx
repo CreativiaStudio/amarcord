@@ -221,14 +221,14 @@ export default function CoursePage() {
                 <li style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
                   <CheckCircle size={24} color="var(--accent-gold)" />
                   <div>
-                    <h4 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '0.2rem' }}>Materiale per Showreel / Portfolio</h4>
+                    <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.1rem', marginBottom: '0.2rem' }}>Materiale per Showreel / Portfolio</h4>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Il materiale girato durante le esercitazioni e i cortometraggi finali sarà tuo e potrai usarlo per presentarti a Casting o Produzioni.</p>
                   </div>
                 </li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <CheckCircle size={24} color="var(--accent-gold)" />
                   <div>
-                    <h4 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '0.2rem' }}>Attestato Accademico</h4>
+                    <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.1rem', marginBottom: '0.2rem' }}>Attestato Accademico</h4>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Certificazione professionale rilasciata dalla Direzione Didattica per certificare le competenze acquisite sul campo.</p>
                   </div>
                 </li>
