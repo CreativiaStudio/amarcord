@@ -257,6 +257,7 @@ export default function CoursePage() {
                     position: 'absolute',
                     top: '1rem',
                     right: '1rem',
+                    zIndex: 10,
                     background: 'rgba(0, 0, 0, 0.75)',
                     backdropFilter: 'blur(4px)',
                     color: '#fff',
