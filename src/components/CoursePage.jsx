@@ -274,12 +274,9 @@ export default function CoursePage() {
                 <AlertTriangle className="warning-icon" />
                 <h2>Ammissione a Numero Chiuso</h2>
               </div>
-              <p>{course.scarcity}</p>
+              {course.scarcity && <p>{course.scarcity}</p>}
               <div className="payment-badge" style={{ marginTop: '1.5rem', padding: '1rem', background: 'rgba(255,255,255,0.05)', borderRadius: 'var(--radius-sm)', borderLeft: '3px solid var(--accent-gold)' }}>
                 <strong style={{ color: 'var(--text-main)' }}>💰 Pagamento Rateizzabile:</strong> Il costo del corso è altamente sostenibile grazie alla possibilità di accedere a comode dilazioni di pagamento mensili.
-              </div>
-              <div className="urgency-badge" style={{ marginTop: '1.5rem', padding: '1rem', background: 'rgba(212, 55, 55, 0.1)', borderRadius: 'var(--radius-sm)', borderLeft: '3px solid #d43737' }}>
-                <strong style={{ color: '#ff6b6b' }}>⏳ Attenzione:</strong> Le ammissioni per l'anno accademico 2026/27 sono in chiusura. Rimangono pochissimi posti disponibili.
               </div>
               <p className="urgency-text" style={{ marginTop: '1.5rem', fontWeight: 'bold' }}>Compila il modulo ora per scoprire i costi completi e prenotare un colloquio conoscitivo gratuito (senza impegno).</p>
             </motion.section>

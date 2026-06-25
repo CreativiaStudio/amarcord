@@ -55,7 +55,7 @@ export const coursesData = {
     teachers: ["Laura Cacciapaglia"],
     shortDesc: "Dal beauty look agli effetti speciali (SFX) per il cinema.",
     careers: ["Truccatore Cinematografico", "Specialista SFX", "Truccatore Teatrale e TV", "Make-up Artist Moda"],
-    scarcity: "Postazioni limitate. Lavorerai nella concitazione di una vera produzione, preparando gli attori veri prima del 'Motore, Ciak, Azione!'.",
+    scarcity: "",
     hasScholarship: false,
     setSubtitle: "Lavorerai sotto pressione nei set accademici, curando il beauty e testando ferite ed effetti speciali (SFX) prima del ciak.",
     popupVideo: "https://pub-596f32c0181d45378b2fcc7e714e164c.r2.dev/trucco-backstage.mp4",
