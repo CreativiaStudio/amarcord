@@ -121,7 +121,7 @@ export default function SuccessStories({ courseId }) {
   const extendedReviews = [...filteredReviews, ...filteredReviews, ...filteredReviews];
 
   return (
-    <section className="success-stories-section section-padding">
+    <section className={`success-stories-section ${courseId ? 'course-specific-stories' : 'section-padding'}`}>
       <div className="container">
         <motion.div 
           className="story-section"
@@ -129,6 +129,7 @@ export default function SuccessStories({ courseId }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          style={{ marginBottom: '1.5rem' }}
         >
           <div className="section-header-left">
             <Star className="section-icon" style={{ color: 'var(--accent-gold)' }} />

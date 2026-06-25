@@ -1,9 +1,29 @@
 .success-stories-section {
   background-color: var(--bg-dark);
   color: var(--text-main);
-  padding: 5rem 0;
   position: relative;
   overflow: hidden;
+}
+
+.success-stories-section.section-padding {
+  padding: 5rem 0;
+}
+
+.course-specific-stories {
+  padding: 2rem 0;
+  background-color: transparent;
+}
+
+.course-specific-stories .stories-grid {
+  margin-bottom: 2rem;
+}
+
+.course-specific-stories .reviews-carousel-wrapper {
+  padding: 1rem 0 1.5rem 0;
+}
+
+.course-specific-stories .reviews-carousel-container {
+  padding-bottom: 20px;
 }
 
 .stories-grid {

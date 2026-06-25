@@ -123,7 +123,7 @@ export default function CoursePage() {
             </motion.section>
 
             {/* RIPROVA SOCIALE SPECIFICA DEL CORSO (Spostata in alto) */}
-            <div style={{ margin: '3rem 0', background: 'rgba(255,255,255,0.02)', borderRadius: 'var(--radius-lg)' }}>
+            <div style={{ margin: '2rem 0', background: 'rgba(255,255,255,0.02)', borderRadius: 'var(--radius-lg)', border: '1px solid rgba(255,255,255,0.05)' }}>
               <SuccessStories courseId={course.id} />
             </div>
 
