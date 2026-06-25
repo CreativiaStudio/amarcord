@@ -46,7 +46,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(250, 250, 247, 0.1) 0%, rgba(250, 250, 247, 1) 100%);
+  background: linear-gradient(180deg, rgba(22, 24, 29, 0.1) 0%, rgba(22, 24, 29, 0.85) 60%, rgba(22, 24, 29, 0.95) 80%, rgba(250, 250, 247, 1) 100%);
   z-index: 1;
 }
 
@@ -71,14 +71,14 @@
 
 .course-title {
   font-size: 3.5rem;
-  color: var(--text-main);
+  color: #fff;
   margin-bottom: 1rem;
   line-height: 1.1;
 }
 
 .course-short-desc {
   font-size: 1.3rem;
-  color: var(--text-muted);
+  color: #e0e0e0;
   margin-bottom: 2rem;
 }
 
@@ -97,7 +97,7 @@
   padding: 0.5rem 1rem;
   border-radius: 30px;
   font-size: 0.9rem;
-  color: var(--text-main);
+  color: #fff;
 }
 
 /* Grid Layout */
@@ -501,7 +501,7 @@
   }
   
   .course-hero-overlay {
-    background: linear-gradient(180deg, rgba(250, 250, 247, 0) 0%, rgba(250, 250, 247, 0.5) 50%, rgba(250, 250, 247, 1) 100%);
+    background: linear-gradient(180deg, rgba(22, 24, 29, 0) 0%, rgba(22, 24, 29, 0.8) 50%, rgba(22, 24, 29, 0.95) 80%, rgba(250, 250, 247, 1) 100%);
   }
   
   .course-title {
