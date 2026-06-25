@@ -134,7 +134,7 @@ export default function SuccessStories({ courseId }) {
             <h2>Dall'aula al set</h2>
           </div>
           <p className="section-subtitle">
-            Non assumiamo teorici. I nostri docenti sono professionisti attivi che scelgono i propri assistenti direttamente tra gli allievi più meritevoli.
+            Non assumiamo teorici. I nostri docenti sono professionisti attivi che possono scegliere i propri assistenti direttamente tra gli allievi più meritevoli (come capitato numerose volte in passato).
           </p>
         </motion.div>
 
