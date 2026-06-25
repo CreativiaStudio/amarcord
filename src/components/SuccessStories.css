@@ -80,6 +80,28 @@
   color: var(--text-muted);
 }
 
+/* Single Story Horizontal Layout (Desktop) */
+.stories-grid.single-story .story-card {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.stories-grid.single-story .story-image-wrapper {
+  width: 45%;
+  height: auto;
+  min-height: 250px;
+}
+
+.stories-grid.single-story .story-content {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
 /* Google Reviews Native Scroll Carousel */
 .reviews-carousel-container {
   position: relative;
@@ -307,5 +329,17 @@
   .story-card {
     width: 100%;
     max-width: 400px;
+  }
+  
+  .stories-grid.single-story .story-card {
+    flex-direction: column;
+  }
+  .stories-grid.single-story .story-image-wrapper {
+    width: 100%;
+    height: 250px;
+  }
+  .stories-grid.single-story .story-content {
+    width: 100%;
+    padding: 1.5rem;
   }
 }

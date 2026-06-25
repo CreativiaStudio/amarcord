@@ -139,7 +139,7 @@ export default function SuccessStories({ courseId }) {
           </p>
         </motion.div>
 
-        <div className="stories-grid">
+        <div className={`stories-grid ${filteredStories.length === 1 ? 'single-story' : ''}`}>
           {filteredStories.map((story, index) => (
             <motion.div 
               key={index}
