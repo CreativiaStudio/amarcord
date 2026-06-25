@@ -89,7 +89,7 @@ export const coursesData = {
     hasScholarship: true,
     setSubtitle: "Nessun testo resterà nel cassetto: le pagine migliori scritte in aula prenderanno fisicamente vita durante i cortometraggi di fine anno.",
     gallery: [
-      "/images/2024_04_Corso-di-sceneggiatura-3.jpg",
+      "/images/2024_04_Corso-di-sceneggiatura-3-upscale.jpg",
       "/images/2026_03_sceneggiatura-Amarcord-1.jpeg",
       "/images/2024_04_Corso-di-sceneggiatura-1.jpg",
       "/images/2024_04_Corso-di-sceneggiatura-2.jpg"
