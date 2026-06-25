@@ -204,13 +204,7 @@ export default function CoursePage() {
                   </div>
                 ))}
               </div>
-              <div className="program-cta glass" style={{ marginTop: '2rem', textAlign: 'center', padding: '2rem' }}>
-                <h3 style={{ marginBottom: '1rem', color: 'var(--text-main)' }}>Vuoi ricevere il Programma Completo?</h3>
-                <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
-                  Compila il modulo e la nostra Direzione Didattica sarà lieta di fornirti tutte le informazioni dettagliate, gli orari e i costi, senza alcun impegno.
-                </p>
-                <button className="btn-primary" onClick={openModal}>Scopri Costi e Programma</button>
-              </div>
+
             </motion.section>
 
             {/* Cosa Otterrai (Esiti Finali) */}
