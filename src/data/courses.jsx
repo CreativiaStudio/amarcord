@@ -70,6 +70,7 @@ export const coursesData = {
     icon: <img src="/images/2024_05_HOME-AMARCORD-new-15.png" alt="Icona Sceneggiatura" style={iconStyle} />,
     heroImage: '/images/2024_04_Corso-di-sceneggiatura-1.jpg',
     heroPosition: 'center 60%',
+    heroPositionMobile: 'center 80%',
     description: "Ogni grande film nasce da una grande pagina bianca. Apprenderai la struttura in tre atti, lo sviluppo dell'arco del personaggio e la formattazione professionale. Attenzione: i primi 5 mesi sono svolti in totale interdisciplina con il corso di Regia. Questo dà numerosi vantaggi agli studenti, permettendo agli sceneggiatori di capire esattamente come le loro parole vengono tradotte sul set.",
     duration: "10 mesi (Ottobre - Luglio)",
     modules: [
