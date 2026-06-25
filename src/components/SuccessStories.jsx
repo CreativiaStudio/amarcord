@@ -137,7 +137,10 @@ export default function SuccessStories({ courseId }) {
         </div>
 
         {/* Recensioni Google - Manual Scroll con Frecce */}
-        <div className="reviews-carousel-container">
+        <div 
+          className="reviews-carousel-container"
+          style={courseId ? { width: '100%', marginLeft: 0, marginRight: 0 } : {}}
+        >
           <div className="reviews-carousel-wrapper">
             <div className="reviews-carousel-track" ref={trackRef}>
             {filteredReviews.map((review, i) => (

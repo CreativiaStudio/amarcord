@@ -64,7 +64,7 @@ export default function CoursePage() {
       <main className="container course-main">
         <div className="course-content-grid">
           
-          <div className="course-story">
+          <div className="course-story" style={{ minWidth: 0 }}>
             
             {/* Introduzione */}
             <motion.section 
