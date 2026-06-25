@@ -30,6 +30,11 @@ export const coursesData = {
       { title: "Realizzazione Pratica sul Set", desc: "Ogni sabato per 5 mesi sarai sul set a curare inquadrature, gestione dello spazio e messa in scena sotto la guida dei docenti per realizzare un vero cortometraggio." }
     ],
     teachers: ["Stefano Reali", "Alfredo Mazzara"],
+    teachersBio: (
+      <>
+        Studierai con <strong>Stefano Reali</strong>, candidato al Premio Oscar® e creatore di colossali successi televisivi italiani (<em>Ultimo</em>), e con <strong>Alfredo Mazzara</strong>, pluripremiato sceneggiatore internazionale (<em>Havana Kyrie</em>). Lavorerai fianco a fianco con veri giganti dell'audiovisivo.
+      </>
+    ),
     shortDesc: "Dirigi il tuo film e capisci chi sta davanti alla macchina da presa.",
     careers: ["Regista Cinematografico", "Aiuto Regista", "Regista Pubblicitario / Videoclip", "Segretario di Edizione"],
     scarcity: "Max 12 allievi. Bonus: i migliori cortometraggi di fine anno verranno inviati a festival nazionali ed internazionali.",
@@ -63,6 +68,11 @@ export const coursesData = {
       { title: "Effetti Speciali e Invecchiamento (SFX)", desc: "Invecchiamento. Facepainting. Studio delle tecniche SFX: ferite, tagli, bruciature, cicatrici, sangue finto. Applicazione barbe." }
     ],
     teachers: ["Laura Cacciapaglia"],
+    teachersBio: (
+      <>
+        Il corso è tenuto da <strong>Laura Cacciapaglia</strong>, stimata make-up artist del cinema italiano con una lunghissima esperienza su set cinematografici di grande rilievo (<em>Profeti</em>, <em>Non c'è campo</em>). Apprenderai i segreti del mestiere da una professionista in piena attività.
+      </>
+    ),
     shortDesc: "Dal beauty look agli effetti speciali (SFX) per il cinema.",
     careers: ["Truccatore Cinematografico", "Specialista SFX", "Truccatore Teatrale e TV", "Make-up Artist Moda"],
     scarcity: "Max 10 allievi. Bonus: le migliori allieve verranno selezionate per curare il trucco e gli effetti speciali sui veri set dei cortometraggi di fine anno.",
@@ -98,6 +108,11 @@ export const coursesData = {
       { title: "La Sceneggiatura", desc: "Elaborazione di una sceneggiatura per cortometraggio in formato americano (dialoghi, descrizioni, formattazione corretta)." }
     ],
     teachers: ["Stefano Reali", "Alfredo Mazzara"],
+    teachersBio: (
+      <>
+        Studierai con <strong>Stefano Reali</strong>, candidato al Premio Oscar® e creatore di colossali successi televisivi italiani (<em>Ultimo</em>), e con <strong>Alfredo Mazzara</strong>, pluripremiato sceneggiatore internazionale (<em>Havana Kyrie</em>). Lavorerai fianco a fianco con veri giganti dell'audiovisivo.
+      </>
+    ),
     shortDesc: "Le tecniche di scrittura creativa per strutturare storie avvincenti.",
     careers: ["Sceneggiatore Cinema/TV", "Soggettista", "Story Editor", "Copywriter Audiovisivo"],
     scarcity: "Max 15 allievi. Bonus: i lavori migliori e i cortometraggi finali verranno effettivamente prodotti e girati dal corso di Regia.",
@@ -129,6 +144,11 @@ export const coursesData = {
       { title: "Inquadratura e Racconto", desc: "Composizione visiva, il piano sequenza, totali e controcampi con conseguente gestione autonoma delle luci sul set." }
     ],
     teachers: ["Raffaele Mertes", "Giuseppe Maldera"],
+    teachersBio: (
+      <>
+        Verrai formato da <strong>Raffaele Mertes</strong>, vincitore di un <em>Primetime Emmy Award</em> e leggenda della fotografia italiana, e da <strong>Giuseppe Maldera</strong>, direttore della fotografia di estrema affidabilità internazionale. Il massimo dell'eccellenza che puoi trovare su un set.
+      </>
+    ),
     shortDesc: "Padroneggia la luce e l'uso delle macchine da presa professionali.",
     careers: ["Direttore della Fotografia (DOP)", "Operatore di Macchina", "Assistente Operatore (Focus Puller)", "DIT / Elettricista"],
     scarcity: "Max 10 allievi. Bonus: gli studenti più capaci lavoreranno come operatori e assistenti alla fotografia nei veri cortometraggi finali dell'Accademia.",
@@ -194,6 +214,11 @@ export const coursesData = {
       { title: "Doppiaggio Animazione", desc: "Il Cartone Animato: passo fondamentale per testare la padronanza totale del mezzo vocale e l'espressività." }
     ],
     teachers: ["Tiziana Lattuca", "Massimo Giuliani"],
+    teachersBio: (
+      <>
+        I tuoi maestri saranno <strong>Massimo Giuliani</strong> (voce storica di Mel Gibson e John Belushi, vincitore del "Leggio d'Oro") e <strong>Tiziana Lattuca</strong>, direttrice di doppiaggio e adattatrice di punta. Lavorerai con i pilastri che curano l'edizione italiana dei grandi blockbuster di Hollywood.
+      </>
+    ),
     shortDesc: "Presta la tua voce al cinema: tecniche di sincrono e interpretazione.",
     careers: ["Doppiatore Professionista", "Speaker Radiofonico", "Voice Over", "Adattatore Dialoghista"],
     scarcity: "Max 10 allievi. Bonus: le voci più meritevoli doppieranno i cortometraggi di fine anno e verranno segnalate alle produzioni esterne.",

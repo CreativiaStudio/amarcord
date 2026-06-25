@@ -4,7 +4,7 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import { coursesData } from '../data/courses';
 import LeadForm from './LeadForm';
 import SuccessStories from './SuccessStories';
-import { ChevronLeft, Calendar, User, BookOpen, Briefcase, Camera, AlertTriangle, CheckCircle, Award } from 'lucide-react';
+import { ChevronLeft, Calendar, User, Users, BookOpen, Briefcase, Camera, AlertTriangle, CheckCircle, Award } from 'lucide-react';
 import './CoursePage.css';
 
 export default function CoursePage() {
@@ -101,6 +101,26 @@ export default function CoursePage() {
                 )}
               </div>
             </motion.section>
+
+            {/* 1.5 Docenti */}
+            {course.teachersBio && (
+              <motion.section 
+                className="story-section glass"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                style={{ padding: '2rem', marginTop: '2rem', marginBottom: '2rem', borderLeft: '4px solid var(--accent-gold)', background: 'rgba(255,255,255,0.02)' }}
+              >
+                <h3 style={{ marginBottom: '1rem', color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1.5rem' }}>
+                  <Users className="section-icon" style={{ width: '28px', height: '28px', color: 'var(--accent-gold)' }} />
+                  A lezione con i Maestri
+                </h3>
+                <div style={{ color: 'var(--text-muted)', lineHeight: '1.6', fontSize: '1.05rem' }}>
+                  {course.teachersBio}
+                </div>
+              </motion.section>
+            )}
 
             {/* 2. Il Sogno (Sbocchi Professionali) */}
             <motion.section 
