@@ -167,7 +167,7 @@ export const coursesData = {
       "/images/2024_04_Corso-di-Doppiaggio-2.jpg",
       "/images/2024_04_Corso-di-Doppiaggio-1.jpg",
       "/images/2024_04_Corso-di-Doppiaggio-3.jpg",
-      "/images/2024_04_Corso-di-Doppiaggio-4.jpg"
+      "/images/Daniele-Giuliani.jpeg"
     ]
   }
 };
