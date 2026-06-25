@@ -69,7 +69,7 @@ export const coursesData = {
     title: 'Sceneggiatura',
     icon: <img src="/images/2024_05_HOME-AMARCORD-new-15.png" alt="Icona Sceneggiatura" style={iconStyle} />,
     heroImage: '/images/2024_04_Corso-di-sceneggiatura-1.jpg',
-    heroImageMobile: '/images/2024_04_Corso-di-sceneggiatura-2.jpg',
+    heroImageMobile: '/images/2026_03_sceneggiatura-Amarcord-1.jpeg',
     heroPosition: 'center 60%',
     heroPositionMobile: 'top center',
     description: "Ogni grande film nasce da una grande pagina bianca. Apprenderai la struttura in tre atti, lo sviluppo dell'arco del personaggio e la formattazione professionale. Attenzione: i primi 5 mesi sono svolti in totale interdisciplina con il corso di Regia. Questo dà numerosi vantaggi agli studenti, permettendo agli sceneggiatori di capire esattamente come le loro parole vengono tradotte sul set.",
