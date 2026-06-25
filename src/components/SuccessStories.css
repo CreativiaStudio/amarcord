@@ -205,12 +205,11 @@
   font-weight: 600;
   color: var(--accent-gold);
   text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .google-review-card:hover .gr-read-more {
-  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* Modal Stili */
