@@ -275,7 +275,7 @@ export default function CoursePage() {
                   <img src="/images/borse-di-studio.jpg" alt="Allievi vincitori di borsa di studio con la direzione" style={{ width: '100%', borderRadius: 'var(--radius-md)', border: '1px solid rgba(255,255,255,0.1)', objectFit: 'cover', display: 'block' }} />
                   <div style={{
                     position: 'absolute',
-                    top: '1rem',
+                    bottom: '1rem',
                     right: '1rem',
                     zIndex: 10,
                     background: 'rgba(0, 0, 0, 0.75)',
