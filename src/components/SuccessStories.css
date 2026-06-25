@@ -18,16 +18,9 @@
   flex: 1 1 300px;
   max-width: 350px;
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.story-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .story-image-wrapper {
@@ -42,11 +35,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
-  transition: transform 0.5s ease;
-}
-
-.story-card:hover .story-image {
-  transform: scale(1.05);
 }
 
 .story-course-badge {
