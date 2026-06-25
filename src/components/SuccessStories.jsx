@@ -6,9 +6,6 @@ import './SuccessStories.css';
 export default function SuccessStories() {
   const [selectedReview, setSelectedReview] = useState(null);
   const trackRef = useRef(null);
-
-  const extendedReviews = [...reviews, ...reviews, ...reviews];
-
   const animationRef = useRef(null);
 
   // Posiziona il carosello al centro (set centrale) al caricamento iniziale
@@ -94,6 +91,8 @@ export default function SuccessStories() {
     { name: 'Ornella Vitagliano', time: '3 anni fa', text: `Ho avuto l’occasione di frequentare l’Accademia e la consiglio davvero tanto. È un ambiente professionale, accogliente e stimolante. Docenti di altissimo livello, trasmettono la loro esperienza attiva agli studenti. È da subito entrata nel mio cuore ❤️` },
     { name: 'Daniele Sanfilippo', time: '3 anni fa', text: `esperienza unica avere come insegnante un direttore di doppiaggio che in futuro potrebbe far realizzare il tuo sogno di diventare doppiatore (ovviamente dipende soprattutto dall impegno individuale)` }
   ];
+
+  const extendedReviews = [...reviews, ...reviews, ...reviews];
 
   return (
     <section className="success-stories-section section-padding">
