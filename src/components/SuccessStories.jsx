@@ -80,8 +80,7 @@ export default function SuccessStories({ courseId }) {
     { course: 'fotografia', name: 'Giuseppe Catalano', time: '3 anni fa', text: `Accademia gestita da esperti del mondo cinematografico e televisivo. Le lezioni sono tenute direttamente da loro, offrendo un servizio di altissima qualità.` },
     { course: 'regia', name: 'Ornella Vitagliano', time: '3 anni fa', text: `Ho avuto l’occasione di frequentare l’Accademia e la consiglio davvero tanto. Docenti di altissimo livello, trasmettono la loro esperienza attiva agli studenti.` },
     { course: 'montaggio', name: 'Alessandro Cardone', time: '3 anni fa', text: `Ho frequentato il corso di montaggio video... ho potuto studiare il programma Avid. Un must della post produzione professionale.` },
-    { course: 'doppiaggio', name: 'Pietro Angelo Tramacere', time: '3 anni fa', text: `Ottima accademia con ottimi maestri, sempre presenti. Ho frequentato il corso di doppiaggio e ogni giorno continuo ad imparare nuove cose.` },
-    { course: 'trucco', name: 'Allieva Anonima', time: '1 anno fa', text: `Laura Cacciapaglia è una professionista incredibile. Il corso di trucco mi ha permesso di toccare con mano cosa significa preparare veri attori sul set, una scuola che ti immerge nella pratica dal giorno zero.` }
+    { course: 'doppiaggio', name: 'Pietro Angelo Tramacere', time: '3 anni fa', text: `Ottima accademia con ottimi maestri, sempre presenti. Ho frequentato il corso di doppiaggio e ogni giorno continuo ad imparare nuove cose.` }
   ];
 
   // Filtra le storie e le recensioni in base al corso attuale
