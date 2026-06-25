@@ -34,8 +34,9 @@
   min-height: 85vh;
   display: flex;
   align-items: flex-end;
+  background-image: var(--hero-bg-desktop);
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
   padding: 4rem 0;
   margin-bottom: 3rem;
 }
@@ -500,6 +501,7 @@
   .course-hero {
     min-height: 80vh;
     padding-bottom: 2rem;
+    background-image: var(--hero-bg-mobile);
   }
   
   .course-hero-overlay {

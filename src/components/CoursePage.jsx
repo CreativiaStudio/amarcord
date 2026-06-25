@@ -41,7 +41,8 @@ export default function CoursePage() {
 
       {/* 1. The Hook (Hero Cinematico) */}
       <header className="course-hero" style={{ 
-        backgroundImage: `url(${course.heroImage})`,
+        '--hero-bg-desktop': `url(${course.heroImage})`,
+        '--hero-bg-mobile': `url(${course.heroImageMobile || course.heroImage})`,
         backgroundPosition: course.heroPosition || 'center'
       }}>
         <div className="course-hero-overlay"></div>
