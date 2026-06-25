@@ -29,10 +29,10 @@ export const coursesData = {
       { title: "Lavoro attoriale", desc: "La regia non è solo 'fare inquadrature'. È soprattutto cura per l’attore. Tecniche di approccio e gestione del ruolo attoriale nella messa in scena." },
       { title: "Realizzazione Pratica sul Set", desc: "Ogni sabato per 5 mesi sarai sul set a curare inquadrature, gestione dello spazio e messa in scena sotto la guida dei docenti per realizzare un vero cortometraggio." }
     ],
-    teachers: ["Stefano Reali", "Alfredo Mazzara"],
+    teachers: ["Stefano Reali", "Raffaele Mertes"],
     teachersBio: (
       <>
-        Studierai con <strong>Stefano Reali</strong>, candidato al Premio Oscar® e creatore di colossali successi televisivi italiani (<em>Ultimo</em>), e con <strong>Alfredo Mazzara</strong>, pluripremiato sceneggiatore internazionale (<em>Havana Kyrie</em>). Lavorerai fianco a fianco con veri giganti dell'audiovisivo.
+        Studierai con <strong>Stefano Reali</strong>, candidato al Premio Oscar® e creatore di colossali successi televisivi italiani (<em>Ultimo</em>), e con <strong>Raffaele Mertes</strong>, vincitore di un <em>Primetime Emmy Award</em> e leggenda del cinema internazionale. Lavorerai fianco a fianco con veri giganti dell'audiovisivo.
       </>
     ),
     shortDesc: "Dirigi il tuo film e capisci chi sta davanti alla macchina da presa.",
