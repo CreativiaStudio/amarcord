@@ -104,6 +104,10 @@
 }
 
 /* Grid Layout */
+.course-main {
+  padding-bottom: 7rem;
+}
+
 .course-content-grid {
   display: grid;
   grid-template-columns: 1fr 400px;
