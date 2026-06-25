@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { coursesData } from '../data/courses';
 import LeadForm from './LeadForm';
+import SuccessStories from './SuccessStories';
 import { ChevronLeft, Calendar, User, BookOpen, Briefcase, Camera, AlertTriangle, CheckCircle, Award } from 'lucide-react';
 import './CoursePage.css';
 
@@ -290,6 +291,8 @@ export default function CoursePage() {
           <LeadForm defaultCourse={course.id.charAt(0).toUpperCase() + course.id.slice(1)} />
         </div>
       </main>
+
+      <SuccessStories />
 
       {/* Sticky Bottom Bar (Mobile Only) */}
       <div className="sticky-bottom-bar mobile-only">

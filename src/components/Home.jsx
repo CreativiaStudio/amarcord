@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Hero from './Hero';
 import LeadForm from './LeadForm';
+import SuccessStories from './SuccessStories';
 import { coursesData } from '../data/courses';
 import './Courses.css'; // Riutilizziamo gli stili della griglia
 import './CoursePage.css'; // Riutilizziamo gli stili per mobile-only e modal
@@ -69,6 +70,8 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      <SuccessStories />
 
       {/* Form di fine pagina (solo mobile) per ottimizzare la CRO */}
       <div className="mobile-only mobile-form-wrapper container" style={{ paddingBottom: '2rem' }}>
