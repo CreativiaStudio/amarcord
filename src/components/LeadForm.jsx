@@ -15,6 +15,10 @@ export default function LeadForm({ defaultCourse = '' }) {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
+    // Generiamo un ID univoco per la deduplicazione dell'evento (es. lead_16843..._xyz)
+    const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    data.event_id = eventId;
+
     // URL del Webhook n8n di Creativia Studio (PRODUZIONE)
     const webhookUrl = 'https://n8n.creativiastudio.com/webhook/amarcord-meta-capi';
     
@@ -25,12 +29,12 @@ export default function LeadForm({ defaultCourse = '' }) {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString()
       });
-      // Esegue il redirect alla Thank You Page invece di mostrare il box
-      navigate('/grazie');
+      // Esegue il redirect alla Thank You Page passando l'eventId nello state
+      navigate('/grazie', { state: { eventId } });
     } catch (error) {
       console.error("Errore nell'invio del form a n8n:", error);
       // Fallback: se n8n fallisce ma vogliamo comunque mandare l'utente alla UI di grazie
-      navigate('/grazie');
+      navigate('/grazie', { state: { eventId } });
     } finally {
       setLoading(false);
     }

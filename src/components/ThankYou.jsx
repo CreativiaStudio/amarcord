@@ -1,17 +1,24 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { CheckCircle, Home, ExternalLink } from 'lucide-react';
 import './ThankYou.css';
 
 export default function ThankYou() {
+  const location = useLocation();
+  const eventId = location.state?.eventId || null;
+
   // Scorri in alto e spara i tracciamenti quando si carica la pagina
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    // 1. Forza l'evento Lead sul Pixel di Meta (se caricato)
+    // 1. Forza l'evento Lead sul Pixel di Meta (se caricato) passando l'eventID per la deduplicazione
     if (typeof window.fbq === 'function') {
-      window.fbq('track', 'Lead');
+      if (eventId) {
+        window.fbq('track', 'Lead', {}, { eventID: eventId });
+      } else {
+        window.fbq('track', 'Lead');
+      }
     }
 
     // 2. Manda l'evento a Google Tag Manager per sicurezza (nel caso usi Google Ads)
