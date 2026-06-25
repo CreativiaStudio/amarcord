@@ -4,7 +4,7 @@
   max-width: 450px;
   position: relative;
   z-index: 10;
-  background-color: rgba(22, 24, 29, 0.85) !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
 }
@@ -12,7 +12,7 @@
 .lead-form-container h3 {
   font-size: 1.5rem; /* Ridotto da 1.8rem */
   margin-bottom: 0.3rem;
-  color: #fff;
+  color: var(--text-main);
 }
 
 .form-subtitle {
