@@ -13,7 +13,9 @@ export const coursesData = {
     title: 'Regia Cinematografica',
     icon: <img src="/images/2024_05_HOME-AMARCORD-new-18.png" alt="Icona Regia" style={iconStyle} />,
     heroImage: '/images/2024_04_Corso-di-regia-1.jpg',
+    heroImageMobile: '/images/Corso-di-regia-hero-mobile.jpg',
     heroPosition: 'center 75%',
+    heroPositionMobile: 'top center',
     description: "Il regista è l'occhio del pubblico. In questo corso imparerai a tradurre un'idea in immagini, guidare gli attori e coordinare l'intera troupe. Dalla pre-produzione al montaggio finale, sarai tu a dettare il ritmo della storia.",
     duration: "10 mesi (Ottobre - Luglio)",
     modules: [
