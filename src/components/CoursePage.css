@@ -1,5 +1,6 @@
+/* La pagina in sé non ha più bisogno del padding fisso, lo passiamo al footer su mobile */
 .course-page {
-  padding-bottom: 80px; /* Space for mobile sticky bar */
+  width: 100%;
 }
 
 /* Nav & Hero */
@@ -537,6 +538,10 @@
   
   .desktop-only { display: none; }
   .mobile-only { display: block; }
+  
+  .app-footer {
+    padding-bottom: calc(3rem + 90px) !important;
+  }
   
   .info-cards {
     grid-template-columns: 1fr;

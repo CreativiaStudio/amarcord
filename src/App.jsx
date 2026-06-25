@@ -18,7 +18,7 @@ function App() {
         </Routes>
         
         {/* Simple Footer shared across all pages */}
-        <footer style={{ backgroundColor: '#293133', textAlign: 'center', padding: '3rem 2rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: '#aaa' }}>
+        <footer className="app-footer" style={{ backgroundColor: '#293133', textAlign: 'center', padding: '3rem 2rem', borderTop: '1px solid rgba(255,255,255,0.05)', color: '#aaa' }}>
           <p>© {new Date().getFullYear()} Accademia Mediterranea del Cinema. Tutti i diritti riservati.</p>
           <p style={{ marginTop: '0.5rem' }}>
             <Link to="/privacy" style={{ color: 'var(--text-muted)', fontSize: '0.9rem', textDecoration: 'underline' }}>Privacy Policy</Link>
