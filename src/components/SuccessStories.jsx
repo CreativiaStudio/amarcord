@@ -90,7 +90,8 @@ export default function SuccessStories({ courseId }) {
   
   // Se non ci sono abbastanza storie specifiche, fall back a quelle generiche per non lasciare il layout vuoto
   if (filteredStories.length === 0) filteredStories = allStories.slice(1, 4);
-  if (filteredReviews.length < 3) filteredReviews = [...filteredReviews, ...allReviews.filter(r => r.course !== courseId).slice(0, 6)];
+  // Aggiungiamo sempre anche le altre recensioni (quelle non di questo corso) per fare massa e avere sempre un carosello pieno, mettendo prima quelle del corso.
+  filteredReviews = [...filteredReviews, ...allReviews.filter(r => r.course !== courseId)];
 
   const extendedReviews = [...filteredReviews, ...filteredReviews, ...filteredReviews];
 
@@ -153,7 +154,11 @@ export default function SuccessStories({ courseId }) {
               >
                 <div className="gr-header">
                   <div className="gr-author-info">
-                    <div className="gr-avatar">{review.name.charAt(0)}</div>
+                    {review.avatar ? (
+                      <img src={review.avatar} alt={review.name} className="gr-avatar-img" />
+                    ) : (
+                      <div className="gr-avatar">{review.name.charAt(0)}</div>
+                    )}
                     <div>
                       <h5 className="gr-author-name">{review.name}</h5>
                       <div className="gr-stars">
@@ -195,7 +200,11 @@ export default function SuccessStories({ courseId }) {
               <button className="review-modal-close" onClick={() => setSelectedReview(null)}>&times;</button>
               <div className="gr-header" style={{ marginBottom: '1.5rem' }}>
                 <div className="gr-author-info">
-                  <div className="gr-avatar">{selectedReview.name.charAt(0)}</div>
+                  {selectedReview.avatar ? (
+                    <img src={selectedReview.avatar} alt={selectedReview.name} className="gr-avatar-img" />
+                  ) : (
+                    <div className="gr-avatar">{selectedReview.name.charAt(0)}</div>
+                  )}
                   <div>
                     <h5 className="gr-author-name">{selectedReview.name}</h5>
                     <div className="gr-stars">
