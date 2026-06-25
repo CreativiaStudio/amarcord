@@ -1,9 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import './SuccessStories.css';
 
 export default function SuccessStories() {
   const [selectedReview, setSelectedReview] = useState(null);
+  const trackRef = useRef(null);
+
+  useEffect(() => {
+    if (selectedReview) return;
+
+    const interval = setInterval(() => {
+      if (trackRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = trackRef.current;
+        if (scrollLeft + clientWidth >= scrollWidth - 10) {
+          trackRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          scroll('right');
+        }
+      }
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [selectedReview]);
+
+  const scroll = (direction) => {
+    if (trackRef.current) {
+      const scrollAmount = 320 + 24; 
+      trackRef.current.scrollBy({ left: direction === 'right' ? scrollAmount : -scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   const stories = [
     {
@@ -79,8 +105,13 @@ export default function SuccessStories() {
         </div>
 
         {/* Recensioni Google - Scroll Orizzontale Nativo */}
-        <div className="reviews-carousel-wrapper">
-          <div className="reviews-carousel-track">
+        <div className="reviews-carousel-container">
+          <button className="carousel-arrow left" onClick={() => scroll('left')} aria-label="Precedente">
+            <ChevronLeft size={24} />
+          </button>
+
+          <div className="reviews-carousel-wrapper">
+            <div className="reviews-carousel-track" ref={trackRef}>
             {reviews.map((review, i) => (
               <div 
                 className="google-review-card glass" 
@@ -113,6 +144,11 @@ export default function SuccessStories() {
               </div>
             ))}
           </div>
+        </div>
+
+          <button className="carousel-arrow right" onClick={() => scroll('right')} aria-label="Successiva">
+            <ChevronRight size={24} />
+          </button>
         </div>
 
         {/* Modal Recensione Completa */}
