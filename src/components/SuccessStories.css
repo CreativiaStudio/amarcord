@@ -7,13 +7,16 @@
 }
 
 .stories-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin-bottom: 4rem;
 }
 
 .story-card {
+  flex: 1 1 300px;
+  max-width: 350px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
@@ -297,7 +300,12 @@
 
 @media (max-width: 992px) {
   .stories-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
+  }
+  .story-card {
+    width: 100%;
+    max-width: 400px;
   }
 }

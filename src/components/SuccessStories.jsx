@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Star } from 'lucide-react';
 import './SuccessStories.css';
 
 export default function SuccessStories({ courseId }) {
@@ -46,11 +47,11 @@ export default function SuccessStories({ courseId }) {
 
   const allStories = [
     {
-      name: 'Giusy La Torre',
+      name: 'Roberta Diana',
       course: 'trucco',
       courseName: 'Trucco Cinematografico',
-      text: 'Scelta personalmente dalla docente Laura Cacciapaglia come assistente al trucco per il set di "Stolen Moments".',
-      image: '/images/2026_03_Trucco-Amarcord-2.jpeg'
+      text: 'Dopo aver frequentato il corso di trucco cinematografico nella nostra Accademia, Roberta ha spiccato il volo lavorando sul set di "Stolen Moments".',
+      image: 'https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/05/346029902_898159524594726_5908876893979497827_n.jpg'
     },
     {
       name: 'Ilaria De Donato',
@@ -123,14 +124,17 @@ export default function SuccessStories({ courseId }) {
     <section className="success-stories-section section-padding">
       <div className="container">
         <motion.div 
-          className="section-header text-center"
+          className="story-section"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">I successi dei nostri allievi:<br/><span className="text-gradient">dall'aula al set.</span></h2>
-          <p className="section-subtitle" style={{ maxWidth: '800px', margin: '0 auto 3rem auto' }}>
+          <div className="section-header-left">
+            <Star className="section-icon" style={{ color: 'var(--accent-gold)' }} />
+            <h2>Dall'aula al set</h2>
+          </div>
+          <p className="section-subtitle">
             Non assumiamo teorici. I nostri docenti sono professionisti attivi che scelgono i propri assistenti direttamente tra gli allievi più meritevoli.
           </p>
         </motion.div>
