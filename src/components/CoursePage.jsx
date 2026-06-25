@@ -278,7 +278,7 @@ export default function CoursePage() {
               <div className="payment-badge" style={{ marginTop: '1.5rem', padding: '1rem', background: 'rgba(255,255,255,0.05)', borderRadius: 'var(--radius-sm)', borderLeft: '3px solid var(--accent-gold)' }}>
                 <strong style={{ color: 'var(--text-main)' }}>💰 Pagamento Rateizzabile:</strong> Il costo del corso è altamente sostenibile grazie alla possibilità di accedere a comode dilazioni di pagamento mensili.
               </div>
-              <p className="urgency-text" style={{ marginTop: '1.5rem', fontWeight: 'bold' }}>Compila il modulo ora per scoprire i costi completi e prenotare un colloquio conoscitivo gratuito (senza impegno).</p>
+              <p className="urgency-text" style={{ marginTop: '1.5rem', fontWeight: 'bold' }}>Compila il form per farti richiamare dalla direzione e fissare un colloquio senza impegno.</p>
             </motion.section>
 
           </div>
