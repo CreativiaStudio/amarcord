@@ -161,25 +161,38 @@
   background: linear-gradient(to left, var(--bg-dark) 0%, transparent 100%);
 }
 
-.google-review-card {
+.google-review-card.white-card {
   width: 320px;
   min-width: 320px;
   height: 280px;
   padding: 1.8rem;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background 0.3s ease;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.google-review-card:hover {
+.google-review-card.white-card:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.google-review-card.white-card .gr-text, 
+.google-review-card.white-card .gr-author-name {
+  color: #333333;
+}
+
+.google-review-card.white-card .gr-time {
+  color: #888888;
+}
+
+.google-review-card.white-card .gr-avatar {
+  color: #fff;
 }
 
 .gr-text-wrapper {
@@ -209,8 +222,38 @@
   transition: transform 0.2s ease;
 }
 
-.google-review-card:hover .gr-read-more {
+.google-review-card.white-card:hover .gr-read-more {
   transform: scale(1.05);
+}
+
+/* Navigation Arrows */
+.reviews-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.review-nav-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.review-nav-btn:hover {
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: #000;
+  transform: scale(1.1);
 }
 
 /* Modal Stili */

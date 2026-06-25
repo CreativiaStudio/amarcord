@@ -6,44 +6,18 @@ import './SuccessStories.css';
 export default function SuccessStories({ courseId }) {
   const [selectedReview, setSelectedReview] = useState(null);
   const trackRef = useRef(null);
-  const animationRef = useRef(null);
 
-  useEffect(() => {
+  const scrollLeft = () => {
     if (trackRef.current) {
-      const setWidth = trackRef.current.scrollWidth / 3;
-      trackRef.current.scrollLeft = setWidth;
-    }
-  }, []);
-
-  const handleScroll = () => {
-    if (!trackRef.current) return;
-    const el = trackRef.current;
-    const setWidth = el.scrollWidth / 3;
-
-    if (el.scrollLeft >= setWidth * 2 - 10) {
-      el.scrollBy({ left: -setWidth, behavior: 'auto' });
-    } 
-    else if (el.scrollLeft <= 10) {
-      el.scrollBy({ left: setWidth, behavior: 'auto' });
+      trackRef.current.scrollBy({ left: -340, behavior: 'smooth' });
     }
   };
 
-  useEffect(() => {
-    if (selectedReview) {
-      if (animationRef.current) cancelAnimationFrame(animationRef.current);
-      return;
+  const scrollRight = () => {
+    if (trackRef.current) {
+      trackRef.current.scrollBy({ left: 340, behavior: 'smooth' });
     }
-    const step = () => {
-      if (trackRef.current) {
-        trackRef.current.scrollLeft += 1;
-      }
-      animationRef.current = requestAnimationFrame(step);
-    };
-    animationRef.current = requestAnimationFrame(step);
-    return () => {
-      if (animationRef.current) cancelAnimationFrame(animationRef.current);
-    };
-  }, [selectedReview]);
+  };
 
   const allStories = [
     {
@@ -162,13 +136,13 @@ export default function SuccessStories({ courseId }) {
           ))}
         </div>
 
-        {/* Recensioni Google - Scroll Orizzontale Nativo */}
+        {/* Recensioni Google - Manual Scroll con Frecce */}
         <div className="reviews-carousel-container">
           <div className="reviews-carousel-wrapper">
-            <div className="reviews-carousel-track" ref={trackRef} onScroll={handleScroll}>
-            {extendedReviews.map((review, i) => (
+            <div className="reviews-carousel-track" ref={trackRef}>
+            {filteredReviews.map((review, i) => (
               <div 
-                className="google-review-card glass" 
+                className="google-review-card white-card" 
                 key={i} 
                 onClick={() => setSelectedReview(review)}
                 role="button"
@@ -199,6 +173,16 @@ export default function SuccessStories({ courseId }) {
             ))}
             </div>
           </div>
+        </div>
+
+        {/* Navigation Arrows */}
+        <div className="reviews-navigation">
+          <button className="review-nav-btn" onClick={scrollLeft} aria-label="Scorri a sinistra">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button className="review-nav-btn" onClick={scrollRight} aria-label="Scorri a destra">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
         </div>
 
         {/* Modal Recensione Completa */}
