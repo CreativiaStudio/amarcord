@@ -67,24 +67,82 @@
 .story-name {
   font-size: 1.3rem;
   margin-bottom: 0.8rem;
-  color: #fff;
+  color: var(--text-main);
   font-weight: 600;
 }
 
 .story-text {
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #b3b3b3;
+  color: var(--text-muted);
 }
 
-/* Google Review Box */
-.google-review-box {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Google Reviews Marquee */
+.reviews-marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 2rem 0;
+  display: flex;
+}
+
+/* Fading edges */
+.reviews-marquee-wrapper::before,
+.reviews-marquee-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.reviews-marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-dark) 0%, transparent 100%);
+}
+.reviews-marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-dark) 0%, transparent 100%);
+}
+
+.reviews-marquee-track {
+  display: flex;
+  width: fit-content;
+  animation: marquee 50s linear infinite;
+}
+
+.reviews-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.reviews-marquee-content {
+  display: flex;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.google-review-card {
+  width: 350px;
+  min-width: 350px;
+  padding: 1.8rem;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.google-review-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .gr-header {
@@ -116,7 +174,7 @@
 .gr-author-name {
   font-size: 1.1rem;
   margin: 0 0 0.2rem 0;
-  color: #fff;
+  color: var(--text-main);
 }
 
 .gr-stars {
@@ -126,7 +184,7 @@
 }
 
 .gr-time {
-  color: #888;
+  color: var(--text-muted);
   font-size: 0.85rem;
   margin-left: 8px;
   letter-spacing: 0;
@@ -135,9 +193,13 @@
 .gr-text {
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #ddd;
+  color: var(--text-main);
   font-style: italic;
   margin: 0;
+}
+
+.gr-logo {
+  flex-shrink: 0;
 }
 
 @media (max-width: 992px) {
