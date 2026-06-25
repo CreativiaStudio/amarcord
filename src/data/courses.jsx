@@ -16,7 +16,12 @@ export const coursesData = {
     heroImageMobile: '/images/Corso-di-regia-hero-mobile.jpg',
     heroPosition: 'center 75%',
     heroPositionMobile: 'top center',
-    description: "Il regista è l'occhio del pubblico. In questo corso imparerai a tradurre un'idea in immagini, guidare gli attori e coordinare l'intera troupe. Dalla pre-produzione al montaggio finale, sarai tu a dettare il ritmo della storia.",
+    description: (
+      <>
+        <p style={{ marginBottom: '1rem' }}>Il regista è l'occhio del pubblico, il vero direttore d'orchestra della macchina del cinema. In questo corso imparerai il mestiere unendo lo studio accademico alla <strong>pratica diretta sul set</strong>.</p>
+        <p>Imparerai a tradurre un'idea in immagini potenti, a decodificare una sceneggiatura, a guidare emotivamente gli attori e a coordinare l'intera troupe. Dalla delicata fase di pre-produzione fino al montaggio finale, sarai tu a prendere le decisioni cruciali prima di gridare: <em>"Motore, Ciak, Azione!"</em>.</p>
+      </>
+    ),
     duration: "10 mesi (Ottobre - Luglio)",
     modules: [
       { title: "Confronto e sviluppo con la sceneggiatura", desc: "Il regista è un interprete. Saper leggere e decodificare una sceneggiatura è la base. Imparerai ad interagire con lo sceneggiatore per trasformare un testo in film." },
@@ -44,7 +49,12 @@ export const coursesData = {
     icon: <img src="/images/2024_05_HOME-AMARCORD-new-14.png" alt="Icona Trucco" style={iconStyle} />,
     heroImage: '/images/2026_03_Trucco-Amarcord-3.jpeg',
     heroPosition: 'center calc(50% + 50px)',
-    description: "Il volto dell'attore è la tua tela. Imparerai a creare make-up correttivi perfetti per il grande schermo e a padroneggiare gli effetti speciali protesici (ferite, invecchiamento, mostri). Il trucco non è estetica, è narrazione visiva.",
+    description: (
+      <>
+        <p style={{ marginBottom: '1rem' }}>Il volto dell'attore è la tua tela, ma il trucco cinematografico non è semplice estetica: è <strong>narrazione visiva pura</strong>.</p>
+        <p>Lavorerai costantemente sotto pressione nei nostri set accademici, imparando a creare make-up correttivi invisibili e perfetti per l'alta definizione del grande schermo. Padroneggerai inoltre l'arte degli <strong>effetti speciali protesici (SFX)</strong>: imparerai a simulare ferite realistiche, cicatrici, bruciature e creature mostruose, per trasformare la materia e la percezione visiva.</p>
+      </>
+    ),
     duration: "10 mesi (Ottobre - Luglio)",
     modules: [
       { title: "Introduzione e Trucco Base", desc: "Studio del volto, volumi, Contouring & Highlighting. Scelta del fondotinta, correzione sopracciglia e trucco occhi." },
@@ -74,7 +84,12 @@ export const coursesData = {
     heroImageMobile: '/images/Corso-di-sceneggiatura-2-mobile.jpg',
     heroPosition: 'center 60%',
     heroPositionMobile: 'top center',
-    description: "Ogni grande film nasce da una grande pagina bianca. Apprenderai la struttura in tre atti, lo sviluppo dell'arco del personaggio e la formattazione professionale. Attenzione: i primi 5 mesi sono svolti in totale interdisciplina con il corso di Regia. Questo dà numerosi vantaggi agli studenti, permettendo agli sceneggiatori di capire esattamente come le loro parole vengono tradotte sul set.",
+    description: (
+      <>
+        <p style={{ marginBottom: '1rem' }}>Ogni grande capolavoro del cinema, prima di essere girato, è stato soltanto una grande pagina bianca. In questo corso apprenderai l'architettura invisibile che tiene incollato lo spettatore allo schermo: la struttura in tre atti, lo sviluppo psicologico del personaggio e la formattazione professionale.</p>
+        <p><strong>Nessun testo resterà nel cassetto</strong>: i primi 5 mesi si svolgono in totale interdisciplina con il corso di Regia. Vedrai le tue parole tradotte immediatamente in azioni fisiche, e le scene migliori scritte in aula prenderanno vita diventando i cortometraggi di fine anno.</p>
+      </>
+    ),
     duration: "10 mesi (Ottobre - Luglio)",
     modules: [
       { title: "Basi e Struttura in tre atti", desc: "Le basi della narrazione audiovisiva, la struttura in tre atti e le varianti moderne." },
@@ -100,7 +115,12 @@ export const coursesData = {
     title: 'Direzione della Fotografia e Operatore MdP',
     icon: <img src="/images/2024_05_HOME-AMARCORD-new-12.png" alt="Icona Fotografia" style={iconStyle} />,
     heroImage: '/fotografia-hero-upscale.png',
-    description: "L'immagine è tutto. Non siamo qui per farti usare una reflex. Metterai le mani su vere macchine da presa cinematografiche (le stesse usate nelle produzioni Netflix: ARRI, RED, Sony) e imparerai a scolpire con la luce. Diventerai il vero braccio destro del regista.",
+    description: (
+      <>
+        <p style={{ marginBottom: '1rem' }}>Al cinema, l'immagine è tutto. La luce è l'inchiostro con cui scriviamo le emozioni. Non siamo qui per farti usare una semplice reflex. Metterai le mani sulle <strong>vere macchine da presa cinematografiche</strong> utilizzate nelle grandi produzioni (ARRI, RED, Sony) e su parchi lampade professionali.</p>
+        <p>Imparerai a scolpire i volti con l'illuminazione, a calibrare l'esposizione, a padroneggiare i movimenti di macchina e a gestire il delicatissimo lavoro del <em>Focus Puller</em>. Diventerai il vero braccio destro del regista, trasformando le sue visioni in cinema.</p>
+      </>
+    ),
     duration: "10 mesi (Ottobre - Luglio)",
     modules: [
       { title: "La Visione e La Luce", desc: "Storia e Stili della cinematografia. Sistemi illuminanti, proiettori, l'uso del colore, dominanti e cura dell'illuminazione specifica per gli attori." },
@@ -126,7 +146,12 @@ export const coursesData = {
     title: 'Recitazione Cinematografica',
     icon: <img src="/images/2024_05_HOME-AMARCORD-new-19.png" alt="Icona Recitazione" style={iconStyle} />,
     heroImage: '/images/2026_03_Amarcord-recitazione-7.jpeg',
-    description: "Recitare per il cinema è l'arte della sottrazione. Imparerai il Metodo Stanislavskij-Strasberg e la tecnica di acting for camera. Lavorerai costantemente davanti all'obiettivo, abbattendo la paura del ciak, e capirai come affrontare un vero provino cinematografico.",
+    description: (
+      <>
+        <p style={{ marginBottom: '1rem' }}>Recitare per il cinema non è fingere, è vivere autenticamente davanti alla macchina da presa. È l'arte della sottrazione. Studierai a fondo il Metodo Stanislavskij-Strasberg e la tecnica di <strong>Acting for Camera</strong>.</p>
+        <p>Non reciterai mai al vuoto: lavorerai costantemente misurandoti con i registi e le vere troupe della scuola, abbattendo la paura del ciak. Svilupperai una totale consapevolezza del tuo corpo e della tua micro-mimica facciale, capendo finalmente come affrontare e vincere un vero provino professionale.</p>
+      </>
+    ),
     duration: "10 mesi (Ottobre - Luglio)",
     frequency: "Ogni Sabato",
     modules: [
@@ -154,7 +179,12 @@ export const coursesData = {
     heroImage: '/images/Daniele-Giuliani-2.jpeg',
     heroImageMobile: '/images/Daniele-Giuliani.jpeg',
     heroPositionMobile: 'bottom center',
-    description: "La voce è il tuo strumento. Affinerai la dizione, l'articolazione e la respirazione diaframmatica. Verrai messo alla prova al leggio in vere sale di doppiaggio, imparando il sincrono labiale, l'adattamento e l'interpretazione al microfono.",
+    description: (
+      <>
+        <p style={{ marginBottom: '1rem' }}>La voce è il tuo strumento più potente e segreto. In questo corso la educherai fino a renderla perfetta, affinando la dizione, eliminando le inflessioni dialettali e padroneggiando la respirazione diaframmatica.</p>
+        <p>La teoria lascia subito spazio alla verità: verrai messo alla prova <strong>al leggio nella nostra vera sala di doppiaggio</strong> professionale (schermo gigante e insonorizzazione totale). Imparerai le complesse tecniche del sincrono labiale, l'adattamento dei dialoghi, il doppiaggio dell'animazione e l'interpretazione viscerale al microfono.</p>
+      </>
+    ),
     duration: "10 mesi (Ottobre - Luglio)",
     frequency: "Frequenza Settimanale",
     modules: [

@@ -74,7 +74,7 @@ export default function CoursePage() {
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
             >
-              <p className="course-full-desc lead-text">{course.description}</p>
+              <div className="course-full-desc lead-text">{course.description}</div>
               
               <div className="info-cards">
                 {(course.duration || course.frequency) && (
