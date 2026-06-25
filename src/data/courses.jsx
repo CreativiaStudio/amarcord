@@ -180,6 +180,12 @@ export const coursesData = {
       { title: "Tecniche di Scena", desc: "I testi classici (dramma e commedia), il monologo, il dialogo e il rapporto col palcoscenico." },
       { title: "Acting For Camera", desc: "Il rapporto esclusivo con la macchina da presa, l’importanza dei 'codici' e la recitazione sui set accademici." }
     ],
+    teachers: ["Massimo Giuliani"],
+    teachersBio: (
+      <>
+        Il corso è tenuto da <strong>Massimo Giuliani</strong>, leggenda del cinema italiano, attore e voce storica di divi assoluti come Mel Gibson e John Belushi. Vincitore del prestigioso <em>"Leggio d'Oro"</em>, ti insegnerà i segreti dell'interpretazione autentica, guidandoti con la stessa maestria con cui dirige i grandi blockbuster di Hollywood.
+      </>
+    ),
     shortDesc: "Scopri il tuo talento e impara le vere tecniche di recitazione su set.",
     careers: ["Attore Cinematografico", "Attore Televisivo", "Performer Teatrale", "Talent Pubblicitario"],
     scarcity: "Max 15 allievi. Bonus: tutti gli allievi reciteranno fisicamente come attori protagonisti o co-protagonisti nei cortometraggi di fine anno diretti dai registi della scuola.",
