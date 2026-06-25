@@ -96,7 +96,7 @@ export default function SuccessStories({ courseId }) {
 
   return (
     <section className={`success-stories-section ${courseId ? 'course-specific-stories' : 'section-padding'}`}>
-      <div className="container">
+      <div className={courseId ? '' : 'container'}>
         <motion.div 
           className="story-section"
           initial={{ opacity: 0, y: 30 }}
