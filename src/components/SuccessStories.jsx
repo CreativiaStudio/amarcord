@@ -24,21 +24,21 @@ export default function SuccessStories({ courseId }) {
       name: 'Roberta Diana',
       course: 'trucco',
       courseName: 'Trucco Cinematografico',
-      text: 'Dopo aver frequentato il corso di trucco cinematografico nella nostra Accademia, Roberta ha spiccato il volo lavorando sul set di "Stolen Moments".',
+      text: 'Distinguendosi in aula per talento e precisione, Roberta è stata scelta direttamente dalla docente Laura Cacciapaglia per lavorare al trucco sul set del film "Stolen Moments".',
       image: 'https://www.accademiamediterraneacinema.com/wp-content/uploads/2024/05/346029902_898159524594726_5908876893979497827_n.jpg'
     },
     {
       name: 'Ilaria De Donato',
       course: 'recitazione',
       courseName: 'Recitazione',
-      text: 'Oggi nel cast della fiction Mediaset "Storia di una famiglia perbene".',
+      text: 'Scelta e segnalata alle produzioni per il talento sviluppato in Accademia, oggi fa parte del cast della fiction Mediaset "Storia di una famiglia perbene".',
       image: '/images/Ilaria-De-Donato.jpeg'
     },
     {
       name: 'Giovanni Capuano',
       course: 'fotografia',
       courseName: 'Fotografia',
-      text: 'Da allievo ad Assistente Data Manager su un vero set Mediaset.',
+      text: 'Notato dai direttori della fotografia per la sua disciplina tecnica, è stato scelto come Assistente Data Manager per lavorare su un vero set Mediaset subito dopo il diploma.',
       image: '/images/Giovanni-Capuano.jpg'
     },
     {
