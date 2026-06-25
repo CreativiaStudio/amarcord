@@ -251,6 +251,7 @@ export default function CoursePage() {
                   <Award className="section-icon" style={{ color: 'var(--accent-gold)' }} />
                   <h2 style={{ color: 'var(--accent-gold)' }}>Borse di Studio Disponibili</h2>
                 </div>
+                <img src="/images/borse-di-studio.jpg" alt="Allievi vincitori di borsa di studio con la direzione" style={{ width: '100%', borderRadius: 'var(--radius-md)', marginBottom: '1.5rem', border: '1px solid rgba(255,255,255,0.1)', objectFit: 'cover' }} />
                 <p>L'Accademia assegna annualmente prestigiose Borse di Studio per questo corso.</p>
                 <p style={{ marginTop: '0.5rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Le agevolazioni vengono assegnate unicamente in base a specifici requisiti, valutati dalla Direzione in sede di colloquio conoscitivo.</p>
               </motion.section>
