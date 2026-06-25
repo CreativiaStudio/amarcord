@@ -94,38 +94,6 @@
   padding: 2rem 0 3rem 0;
 }
 
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--accent-gold);
-  color: #000;
-  border: none;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.2s ease, opacity 0.2s ease;
-  opacity: 0.8;
-}
-
-.carousel-arrow:hover {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-arrow.left {
-  left: 3vw;
-}
-
-.carousel-arrow.right {
-  right: 3vw;
-}
 
 .reviews-carousel-track {
   display: flex;

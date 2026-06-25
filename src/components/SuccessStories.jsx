@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import './SuccessStories.css';
 
@@ -50,13 +49,6 @@ export default function SuccessStories() {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
   }, [selectedReview]);
-
-  const scroll = (direction) => {
-    if (trackRef.current) {
-      const scrollAmount = 320 + 24; 
-      trackRef.current.scrollBy({ left: direction === 'right' ? scrollAmount : -scrollAmount, behavior: 'smooth' });
-    }
-  };
 
   const stories = [
     {
@@ -135,10 +127,6 @@ export default function SuccessStories() {
 
         {/* Recensioni Google - Scroll Orizzontale Nativo */}
         <div className="reviews-carousel-container">
-          <button className="carousel-arrow left" onClick={() => scroll('left')} aria-label="Precedente">
-            <ChevronLeft size={24} />
-          </button>
-
           <div className="reviews-carousel-wrapper">
             <div className="reviews-carousel-track" ref={trackRef} onScroll={handleScroll}>
             {extendedReviews.map((review, i) => (
@@ -172,12 +160,8 @@ export default function SuccessStories() {
                 <div className="gr-read-more">Leggi tutto</div>
               </div>
             ))}
+            </div>
           </div>
-        </div>
-
-          <button className="carousel-arrow right" onClick={() => scroll('right')} aria-label="Successiva">
-            <ChevronRight size={24} />
-          </button>
         </div>
 
         {/* Modal Recensione Completa */}
