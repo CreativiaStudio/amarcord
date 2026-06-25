@@ -77,62 +77,44 @@
   color: var(--text-muted);
 }
 
-/* Google Reviews Marquee */
-.reviews-marquee-wrapper {
-  overflow: hidden;
+/* Google Reviews Native Scroll Carousel */
+.reviews-carousel-wrapper {
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  padding: 2rem 0;
+  padding: 2rem 0 3rem 0;
+}
+
+.reviews-carousel-track {
   display: flex;
+  gap: 1.5rem;
+  padding: 0 5vw;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
 }
 
-/* Fading edges */
-.reviews-marquee-wrapper::before,
-.reviews-marquee-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 150px;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
-.reviews-marquee-wrapper::before {
-  left: 0;
-  background: linear-gradient(to right, var(--bg-dark) 0%, transparent 100%);
-}
-.reviews-marquee-wrapper::after {
-  right: 0;
-  background: linear-gradient(to left, var(--bg-dark) 0%, transparent 100%);
-}
-
-.reviews-marquee-track {
-  display: flex;
-  width: fit-content;
-  animation: marquee 50s linear infinite;
-}
-
-.reviews-marquee-track:hover {
-  animation-play-state: paused;
-}
-
-.reviews-marquee-content {
-  display: flex;
-  gap: 2rem;
-  padding: 0 1rem;
+.reviews-carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 .google-review-card {
-  width: 350px;
-  min-width: 350px;
+  width: 320px;
+  min-width: 320px;
+  height: 280px;
   padding: 1.8rem;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
+  scroll-snap-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .google-review-card:hover {
@@ -140,9 +122,101 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.gr-text-wrapper {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.gr-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  font-style: italic;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.gr-read-more {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.google-review-card:hover .gr-read-more {
+  opacity: 1;
+}
+
+/* Modal Stili */
+.review-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.review-modal-content {
+  background: var(--bg-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  padding: 2.5rem;
+  position: relative;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease;
+}
+
+.review-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.review-modal-close:hover {
+  color: #fff;
+}
+
+.gr-text.full-text {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+  font-size: 1.15rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .gr-header {
@@ -162,8 +236,8 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #000;
-  color: #fff;
+  background: var(--accent-gold);
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,6 +249,7 @@
   font-size: 1.1rem;
   margin: 0 0 0.2rem 0;
   color: var(--text-main);
+  font-weight: 600;
 }
 
 .gr-stars {
@@ -188,14 +263,6 @@
   font-size: 0.85rem;
   margin-left: 8px;
   letter-spacing: 0;
-}
-
-.gr-text {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: var(--text-main);
-  font-style: italic;
-  margin: 0;
 }
 
 .gr-logo {

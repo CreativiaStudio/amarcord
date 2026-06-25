@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './SuccessStories.css';
 
 export default function SuccessStories() {
+  const [selectedReview, setSelectedReview] = useState(null);
+
   const stories = [
     {
       name: 'Ilaria De Donato',
@@ -76,37 +78,69 @@ export default function SuccessStories() {
           ))}
         </div>
 
-        {/* Recensioni Google a scorrimento (Marquee) */}
-        <div className="reviews-marquee-wrapper">
-          <div className="reviews-marquee-track">
-            {[0, 1].map((trackIdx) => (
-              <div className="reviews-marquee-content" key={trackIdx} aria-hidden={trackIdx === 1}>
-                {reviews.map((review, i) => (
-                  <div className="google-review-card glass" key={i}>
-                    <div className="gr-header">
-                      <div className="gr-author-info">
-                        <div className="gr-avatar">{review.name.charAt(0)}</div>
-                        <div>
-                          <h5 className="gr-author-name">{review.name}</h5>
-                          <div className="gr-stars">
-                            ★★★★★ <span className="gr-time">{review.time}</span>
-                          </div>
-                        </div>
+        {/* Recensioni Google - Scroll Orizzontale Nativo */}
+        <div className="reviews-carousel-wrapper">
+          <div className="reviews-carousel-track">
+            {reviews.map((review, i) => (
+              <div 
+                className="google-review-card glass" 
+                key={i} 
+                onClick={() => setSelectedReview(review)}
+                role="button"
+                tabIndex={0}
+              >
+                <div className="gr-header">
+                  <div className="gr-author-info">
+                    <div className="gr-avatar">{review.name.charAt(0)}</div>
+                    <div>
+                      <h5 className="gr-author-name">{review.name}</h5>
+                      <div className="gr-stars">
+                        ★★★★★ <span className="gr-time">{review.time}</span>
                       </div>
-                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="gr-logo">
-                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                      </svg>
                     </div>
-                    <p className="gr-text">"{review.text}"</p>
                   </div>
-                ))}
+                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="gr-logo">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                  </svg>
+                </div>
+                <div className="gr-text-wrapper">
+                  <p className="gr-text">"{review.text}"</p>
+                </div>
+                <div className="gr-read-more">Leggi tutto</div>
               </div>
             ))}
           </div>
         </div>
+
+        {/* Modal Recensione Completa */}
+        {selectedReview && (
+          <div className="review-modal-overlay" onClick={() => setSelectedReview(null)}>
+            <div className="review-modal-content glass" onClick={e => e.stopPropagation()}>
+              <button className="review-modal-close" onClick={() => setSelectedReview(null)}>&times;</button>
+              <div className="gr-header" style={{ marginBottom: '1.5rem' }}>
+                <div className="gr-author-info">
+                  <div className="gr-avatar">{selectedReview.name.charAt(0)}</div>
+                  <div>
+                    <h5 className="gr-author-name">{selectedReview.name}</h5>
+                    <div className="gr-stars">
+                      ★★★★★ <span className="gr-time">{selectedReview.time}</span>
+                    </div>
+                  </div>
+                </div>
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="gr-logo">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+              </div>
+              <p className="gr-text full-text">"{selectedReview.text}"</p>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
