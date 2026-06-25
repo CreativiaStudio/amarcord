@@ -21,11 +21,19 @@ export default function ThankYou() {
       }
     }
 
-    // 2. Manda l'evento a Google Tag Manager per sicurezza (nel caso usi Google Ads)
+    // 2. Manda l'evento a Google Tag Manager per sicurezza
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: 'page_view_grazie',
       page_path: '/grazie'
+    });
+
+    // 3. Invia la conversione direttamente a Google Ads (bypass GTM)
+    window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
+    window.gtag('event', 'conversion', {
+      'send_to': 'AW-18051680301/VcpyCJPrnJccEK2Q259D',
+      'value': 1.0,
+      'currency': 'EUR'
     });
   }, []);
 
