@@ -73,8 +73,10 @@ export default function LeadForm({ defaultCourse = '' }) {
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <h3>Richiedi Informazioni</h3>
-      <p className="form-subtitle">Compila il modulo per scoprire come trasformare la tua passione in professione.</p>
+      <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>Scarica Programma e Costi</h3>
+      <p className="form-subtitle" style={{ fontSize: '0.95rem', marginBottom: '1.5rem', color: 'var(--text-muted)' }}>
+        Ammissioni a numero chiuso. Compila il modulo senza impegno per ricevere il materiale informativo.
+      </p>
       
       <form onSubmit={handleSubmit} className="lead-form">
         <div className="form-group">
@@ -112,8 +114,8 @@ export default function LeadForm({ defaultCourse = '' }) {
           </label>
         </div>
 
-        <button type="submit" className="btn-primary" style={{ width: '100%' }} disabled={loading}>
-          {loading ? 'Invio in corso...' : 'Invia Richiesta'}
+        <button type="submit" className="btn-primary" style={{ width: '100%', fontSize: '1.05rem', padding: '1rem' }} disabled={loading}>
+          {loading ? 'Invio in corso...' : 'Richiedi Costi e Programma'}
         </button>
         <p style={{ fontSize: '0.85rem', textAlign: 'center', marginTop: '1.5rem', color: 'var(--text-muted)', fontStyle: 'italic', lineHeight: 1.4 }}>
           I nostri percorsi formativi sono strutturati per accompagnare allievi dai 16 ai 40 anni.

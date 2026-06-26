@@ -57,6 +57,22 @@ export default function CoursePage() {
             <div className="stat-pill"><CheckCircle size={16}/> 100% Pratica Reale</div>
             <div className="stat-pill"><CheckCircle size={16}/> Docenti Professionisti</div>
           </div>
+          <div className="hero-cta" style={{ marginTop: '2.5rem' }}>
+            <button 
+              className="btn-primary animate-pulse-subtle" 
+              onClick={() => {
+                if (window.innerWidth <= 768) {
+                  openModal();
+                } else {
+                  const formElement = document.getElementById('lead-form');
+                  if (formElement) formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+              }} 
+              style={{ fontSize: '1.1rem', padding: '1rem 2rem', boxShadow: '0 8px 24px rgba(212, 175, 55, 0.4)' }}
+            >
+              Richiedi Costi e Programma
+            </button>
+          </div>
         </div>
       </header>
 
