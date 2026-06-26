@@ -354,7 +354,7 @@ export default function CoursePage() {
       {/* Sticky Bottom Bar (Mobile Only) */}
       <div className="sticky-bottom-bar mobile-only">
         <button className="btn-primary full-width animate-pulse-subtle" onClick={openModal}>
-          Ricevi il Programma Completo
+          Richiedi un Colloquio Informativo
         </button>
       </div>
 
