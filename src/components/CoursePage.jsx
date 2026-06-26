@@ -353,8 +353,8 @@ export default function CoursePage() {
 
       {/* Sticky Bottom Bar (Mobile Only) */}
       <div className="sticky-bottom-bar mobile-only">
-        <button className="btn-primary full-width animate-pulse-subtle" onClick={openModal} style={{ fontWeight: 'bold', letterSpacing: '0.5px' }}>
-          VERIFICA DISPONIBILITÀ E COSTI
+        <button className="btn-primary full-width animate-pulse-subtle" onClick={openModal}>
+          Scopri costi e programma
         </button>
       </div>
 
