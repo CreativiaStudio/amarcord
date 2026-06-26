@@ -28,6 +28,21 @@ export default function LeadForm({ defaultCourse = '' }) {
       }
     }
 
+    // Passiamo l'URL completo della pagina (contiene tutti gli UTM e i click ID)
+    data.page_url = window.location.href;
+
+    // Deriviamo la sorgente del traffico per facilitare la segmentazione su SwipeOne
+    const utmSource = (urlParams.get('utm_source') || '').toLowerCase();
+    if (urlParams.get('gclid') || utmSource === 'google') {
+      data.traffic_source = 'google';
+    } else if (urlParams.get('fbclid') || utmSource === 'facebook' || utmSource === 'meta' || utmSource === 'ig' || utmSource === 'instagram') {
+      data.traffic_source = 'meta';
+    } else if (utmSource) {
+      data.traffic_source = utmSource;
+    } else {
+      data.traffic_source = 'organic';
+    }
+
     // URL del Webhook n8n di Creativia Studio (PRODUZIONE)
     const webhookUrl = 'https://n8n.creativiastudio.com/webhook/amarcord-meta-capi';
     
