@@ -53,6 +53,10 @@ export default function CoursePage() {
           <div className="course-badge">Accademia Amarcord</div>
           <h1 className="course-title">{course.title}</h1>
           <p className="course-short-desc">{course.shortDesc}</p>
+          <div className="hero-stats">
+            <div className="stat-pill"><CheckCircle size={16}/> 100% Pratica Reale</div>
+            <div className="stat-pill"><CheckCircle size={16}/> Docenti Professionisti</div>
+          </div>
         </div>
       </header>
 
