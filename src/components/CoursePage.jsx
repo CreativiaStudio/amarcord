@@ -53,26 +53,6 @@ export default function CoursePage() {
           <div className="course-badge">Accademia Amarcord</div>
           <h1 className="course-title">{course.title}</h1>
           <p className="course-short-desc">{course.shortDesc}</p>
-          <div className="hero-stats">
-            <div className="stat-pill"><CheckCircle size={16}/> 100% Pratica Reale</div>
-            <div className="stat-pill"><CheckCircle size={16}/> Docenti Professionisti</div>
-          </div>
-          <div className="hero-cta" style={{ marginTop: '2.5rem' }}>
-            <button 
-              className="btn-primary animate-pulse-subtle" 
-              onClick={() => {
-                if (window.innerWidth <= 768) {
-                  openModal();
-                } else {
-                  const formElement = document.getElementById('lead-form');
-                  if (formElement) formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-              }} 
-              style={{ fontSize: '1.1rem', padding: '1rem 2rem', boxShadow: '0 8px 24px rgba(212, 175, 55, 0.4)' }}
-            >
-              Richiedi Costi e Programma
-            </button>
-          </div>
         </div>
       </header>
 
@@ -354,7 +334,7 @@ export default function CoursePage() {
       {/* Sticky Bottom Bar (Mobile Only) */}
       <div className="sticky-bottom-bar mobile-only">
         <button className="btn-primary full-width animate-pulse-subtle" onClick={openModal}>
-          Richiedi un Colloquio Informativo
+          Richiedi informazioni
         </button>
       </div>
 
