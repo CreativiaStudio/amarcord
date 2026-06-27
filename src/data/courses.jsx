@@ -56,8 +56,8 @@ export const coursesData = {
     heroPosition: 'center calc(50% + 50px)',
     description: (
       <>
-        <p style={{ marginBottom: '1rem' }}>Il volto dell'attore è la tua tela, ma il trucco cinematografico non è semplice estetica: è <strong>narrazione visiva pura</strong>.</p>
-        <p>Lavorerai costantemente sotto pressione nei nostri set accademici, imparando a creare make-up correttivi invisibili e perfetti per l'alta definizione del grande schermo. Padroneggerai inoltre l'arte degli <strong>effetti speciali protesici (SFX)</strong>: imparerai a simulare ferite realistiche, cicatrici, bruciature e creature mostruose, per trasformare la materia e la percezione visiva.</p>
+        <p style={{ marginBottom: '1rem' }}>Stufa della solita routine da trucco sposa o correttivo da salone? Il trucco cinematografico è un'altra cosa: è <strong>narrazione visiva pura</strong> e creazione di veri personaggi.</p>
+        <p>Dimentica i semplici banchi di scuola. Qui lavorerai costantemente sotto pressione nei nostri veri set accademici (fianco a fianco con registi e attori). Padroneggerai il beauty da cinepresa e, soprattutto, l'arte degli <strong>effetti speciali protesici (SFX)</strong>: imparerai a simulare ferite iper-realistiche, invecchiamenti teatrali e creature mostruose. È il momento di trasformare la tua passione in una carriera da set.</p>
       </>
     ),
     duration: "10 mesi (Ottobre - Luglio)",
